@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.account.CreateAccountStep2 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="622dp"
+    android:paddingTop="30dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="30dp"
+    >
+	
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/label_bigture_id"
+	        android:textSize="16dp"
+	        android:textStyle="bold"
+	        android:textColor="@color/account_popup_text_color"
+	         />
+	
+	    <EditText
+	        android:id="@+id/editBigtureId"
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"
+	        android:layout_marginTop="10dp"
+	        android:background="@drawable/common_inputbox_1_bg"
+	        android:ems="10"
+	        android:hint="name@example.com"
+	        android:textColorHint="@color/text_color_hint"
+	        android:inputType="textEmailAddress"
+	        android:paddingLeft="13dp" >
+	
+	        <requestFocus />
+	    </EditText>
+	
+	    <TextView
+	        android:id="@+id/passwordBoxTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="14dp"
+	        android:text="@string/label_password_rule"
+	        android:textStyle="bold"
+	        android:textColor="@color/account_popup_text_color"
+	        android:textSize="16dp" />
+	
+	    <LinearLayout
+	        android:id="@+id/passwordBox"
+	        android:layout_width="match_parent"
+	        android:layout_height="93dp"
+	        android:layout_marginTop="10dp"
+	        android:padding="0dp"
+	        android:background="@drawable/common_inputbox_2_bg"
+	        android:orientation="vertical" >
+	
+	        <EditText
+	            android:id="@+id/editPassword1"
+	            android:layout_width="match_parent"
+	            android:layout_height="46dp"
+	            android:layout_marginTop="0dp"
+	            android:background="@null"
+	            android:ems="10"
+	           
+	            android:textColorHint="@color/text_color_hint"
+	            android:inputType="textPassword"
+	            android:paddingLeft="13dp" >
+	
+	            <requestFocus />
+	        </EditText>
+	
+	        <EditText
+	            android:id="@+id/editPassword2"
+	            android:layout_width="match_parent"
+	            android:layout_height="46dp"
+	            android:layout_marginTop="1dp"
+	            android:background="@null"
+	            android:ems="10"
+	           
+	            android:textColorHint="@color/text_color_hint"
+	            android:inputType="textPassword"
+	            android:paddingLeft="13dp" />
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="14dp"
+	        android:text="@string/label_nickname"
+	         android:textStyle="bold"
+	        android:textColor="@color/account_popup_text_color"
+	        android:textSize="16dp" />
+	
+	    <EditText
+	        android:id="@+id/editNickname"
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"
+	        android:layout_marginTop="10dp"
+	        android:background="@drawable/common_inputbox_1_bg"
+	        android:ems="10"
+	        
+	        android:textColorHint="@color/text_color_hint"
+	        android:paddingLeft="13dp" >
+	
+	        <requestFocus />
+	    </EditText>
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="14dp"
+	        android:orientation="horizontal" >
+	
+	        <RelativeLayout
+	            android:layout_width="249dp"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:id="@+id/textView3"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/label_birthday"
+	                android:textStyle="bold"
+	       			android:textColor="@color/account_popup_text_color"
+	                android:textSize="16dp" />
+	
+	            <LinearLayout
+	                android:id="@+id/linearLayout3"
+	                android:layout_width="249dp"
+	                android:layout_height="46dp"
+	                android:layout_below="@+id/textView3"
+	                android:layout_marginTop="10dp"
+	                android:background="@drawable/inputbox"
+	                android:gravity="center_vertical"
+	                android:paddingRight="10dp"
+	                >
+	
+	                <TextView
+	                    android:id="@+id/birthdayLabel"
+	                    android:layout_width="210dp"
+	                    android:layout_height="46dp"
+	                    android:gravity="center_vertical"
+	                    
+	                    android:textSize="16dp"
+	                    android:paddingLeft="10dp" />
+	
+	                <ImageView
+	                    android:id="@+id/imagePickupBirthday"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_weight="1"
+	                    android:scaleType="center"
+	                    android:src="@drawable/common_list_arr_n" />
+	            </LinearLayout>
+	        </RelativeLayout>
+	
+	        <RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_marginLeft="10dp" >
+	
+	            <TextView
+	                android:id="@+id/textView5"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/label_gender"
+	                android:textStyle="bold"
+	       			android:textColor="@color/account_popup_text_color"
+	                android:textSize="16dp" />
+	
+	            <Button
+	                android:id="@+id/btnMale"
+	                android:layout_width="112dp"
+	                android:layout_height="46dp"
+	                android:layout_below="@+id/textView5"
+	                android:layout_marginTop="10dp"
+	                android:background="@drawable/selector_btn_account_tab_left"
+	                android:text="@string/account_lb_create_male"
+	                android:textStyle="bold"
+	       			android:textColor="@color/account_popup_text_color"
+	                android:textSize="16dp" />
+	
+	            <Button
+	                android:id="@+id/btnFemale"
+	                android:layout_width="111dp"
+	                android:layout_height="46dp"
+	                android:layout_alignTop="@+id/btnMale"
+	                android:layout_toRightOf="@+id/btnMale"
+	                android:background="@drawable/selector_btn_account_tab_right"
+	                android:text="@string/account_lb_create_female"
+	                android:textStyle="bold"
+	       			android:textColor="@color/account_popup_text_color"
+	                android:textSize="16dp" />
+	        </RelativeLayout>
+	    </LinearLayout>
+	
+	    <RelativeLayout
+	        android:id="@+id/relativeLayout1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="14dp" >
+	
+	        <TextView
+	            android:id="@+id/textView5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/label_country"
+	            android:textStyle="bold"
+	       		android:textColor="@color/account_popup_text_color"
+	            android:textSize="16dp" />
+	
+	        <LinearLayout
+	            android:id="@+id/linearLayout3"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/textView5"
+	            android:layout_marginTop="10dp"
+	            android:background="@drawable/inputbox"
+	            android:gravity="center_vertical"
+	            android:paddingRight="10dp" >
+	
+	            <TextView
+	                android:id="@+id/countrySelect"
+	                android:layout_width="450dp"
+	                android:layout_height="46dp"
+	                
+	                android:textSize="16dp"
+	                android:gravity="center_vertical"
+	                android:paddingLeft="10dp" />
+	
+	            <ImageView
+	                android:id="@+id/pickupCountry"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_gravity="right"
+	                android:gravity="right"
+	                android:scaleType="center"
+	                android:src="@drawable/common_list_arr_n" />
+	        </LinearLayout>
+	    </RelativeLayout>
+	</LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom|center"
+        android:padding="0dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+        <Button
+	        android:id="@+id/btnDone"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/selector_popup_button"
+	        android:text="@string/common_po_finished"
+	        android:textColor="#ffffffff"
+	        android:textSize="16dp"
+	        android:enabled="false"
+	        android:textStyle="bold" />
+    </LinearLayout>    
+
+</com.clockworks.android.tablet.bigture.views.account.CreateAccountStep2>

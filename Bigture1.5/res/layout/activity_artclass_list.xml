@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_bg_check_pattern_x" >
+    
+ 	
+     <fragment android:name="com.clockworks.android.tablet.bigture.fragment.common.TitleBar"
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <FrameLayout
+        android:id="@+id/listContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="104dp"
+        android:clipChildren="true" >
+      
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/tabBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical" />
+    
+    
+</FrameLayout>

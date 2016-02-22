@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="41dp" >
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       >
+        
+	    <TextView
+	        android:id="@+id/periodLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="TextView"
+	        android:textSize="16dp"
+	        android:visibility="gone"
+	        android:layout_marginTop="20dp"
+	        android:textColor="@color/tab_text_p"/>
+		
+	    <Button 
+	        android:id="@+id/btnCareerMenu"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginTop="14dp"
+	        android:background="@drawable/selector_btn_edit"
+	        />
+	</RelativeLayout>
+	<TextView
+        android:id="@+id/contentLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp" 
+        android:textStyle="bold"
+        android:textColor="@color/tab_text_p"/>
+	
+    <LinearLayout
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="@color/career_divider">
+	 </LinearLayout>
+
+</LinearLayout>

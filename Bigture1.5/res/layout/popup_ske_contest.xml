@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="566dp"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="549dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/shareonbigture_bookstory_bg"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:background="#ffffffff"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent" >
+
+        </ListView>
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_old_popup_button_red"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+    
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_top_bg" >
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Submit to Contest"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:background="@drawable/selector_btn_popup"
+            android:minHeight="38dp"
+            android:text="Cancel"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</FrameLayout>

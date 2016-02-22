@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="wrap_content" >
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_popup_bg"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        android:padding="0dp"
+        >
+        <TextView 
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artwork info"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/account_popup_text_color"
+            />
+        
+	      <LinearLayout
+	         android:layout_marginLeft="30dp"
+             android:layout_marginRight="30dp" 
+	         android:layout_marginTop="10dp"
+	         android:layout_width="match_parent"
+	         android:layout_height="46dp"
+	         android:background="@drawable/common_inputbox_1_bg"
+	         android:padding="10dp" >
+	
+	         <EditText
+	             android:id="@+id/editArtworkTitle"
+	             android:layout_marginLeft="13dp"
+	             android:layout_width="0dip"
+	             android:layout_height="match_parent"
+	             android:layout_weight="1"
+	             android:background="@null"
+	             android:ems="10"
+	             android:imeOptions="actionDone"
+	             android:maxLength="20"
+	             android:inputType="textShortMessage"
+	             android:maxLines="1"
+	             android:textSize="16dp" >
+	
+	             <requestFocus />
+	         </EditText>
+	     </LinearLayout>
+	     <LinearLayout 
+	         android:layout_width="match_parent"
+	         android:layout_height="93dp"
+	         android:orientation="horizontal"
+	         android:layout_marginTop="10dp"
+	         android:layout_marginLeft="30dp"
+             android:layout_marginRight="30dp" 	         
+	         >
+	         <ImageView 
+	             android:id="@+id/artworkImg"
+	             android:layout_width="126dp"
+	             android:layout_height="93dp"
+	             android:scaleType="centerCrop"
+	             />
+	          <LinearLayout
+		         android:layout_marginLeft="10dp"
+		         android:layout_width="344dp"
+		         android:layout_height="93dp"
+		         android:background="@drawable/common_inputbox_1_bg"
+		         android:padding="10dp" >
+	             <EditText
+		             android:id="@+id/editArtworkComment"
+		             android:layout_width="0dip"
+		             android:layout_height="match_parent"
+		             android:layout_weight="1"
+		             android:background="@null"
+		             android:ems="10"
+		             android:imeOptions="actionDone"
+		             android:maxLines="4"
+		             android:textSize="16dp" >
+		
+		         </EditText>
+	           </LinearLayout>
+	         
+	     </LinearLayout>
+	     <LinearLayout 
+	         android:layout_width="fill_parent"
+	         android:layout_height="1dp"
+	         android:layout_marginTop="20dp"
+	         android:layout_marginBottom="20dp"
+	         android:background="@color/edit_popup_divider"
+	         ></LinearLayout> 
+	       <TextView 
+	            android:layout_marginLeft="30dp"
+	            android:layout_marginRight="30dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Privacy Setting"
+	            android:textSize="18dp"
+	            android:textStyle="bold"
+	            android:textColor="@color/account_popup_text_color"
+	            />
+	      <LinearLayout 
+	          android:layout_width="fill_parent"
+	          android:layout_height="109dp"
+	          android:orientation="horizontal"
+	          android:layout_marginTop="10dp"
+	          android:layout_marginLeft="30dp"
+	          android:layout_marginRight="30dp"
+	          android:layout_marginBottom="30dp"
+	          >
+	           <RelativeLayout 
+	           		android:id="@+id/artworkPublic"
+			   	    android:layout_width="235dp"
+			   	    android:layout_height="fill_parent"
+			   	    android:background="@drawable/selector_common_radio"
+ 					android:paddingLeft="9dp"
+ 			   	    android:paddingRight="9dp"
+			   	    android:paddingTop="8dp"
+			   	    android:paddingBottom="8dp"
+	           >
+	              <TextView 
+	                  android:id="@+id/publicTitle"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="wrap_content"
+	                  android:text="Public artworks"
+	                  android:textSize="18dp"
+	                  android:textStyle="bold"
+	                  android:textColor="@color/context_menu_color"
+	                  />
+	               <TextView 
+	                  android:layout_width="fill_parent"
+	                  android:layout_height="wrap_content"
+	                  android:text="Other Artist can see your pigture on the Artworks gallery."
+	                  android:textSize="16dp"
+	                  android:layout_below="@+id/publicTitle"
+	                  android:layout_marginTop="5dp"
+	                  android:textColor="@color/context_menu_color"
+	                  />
+	               
+	           </RelativeLayout>
+	          <RelativeLayout 
+	           		android:id="@+id/artworkPrivate"
+	           		android:layout_marginLeft="10dp"
+			   	    android:layout_width="235dp"
+			   	     android:paddingLeft="9dp"
+			   	    android:paddingRight="9dp"
+			   	    android:paddingTop="8dp"
+			   	    android:paddingBottom="8dp"
+			   	    android:layout_height="fill_parent"
+			   	    android:background="@drawable/selector_common_radio"
+	           >
+	              	<ImageView 
+	              	    android:id="@+id/privacyImg"
+	              	    android:layout_width="wrap_content"
+	              	    android:layout_height="wrap_content"
+	              	    android:src="@drawable/artworkspage_popup_privacy_icon_private"
+	              	    /> 
+	              
+	            	<TextView 
+	                  android:id="@+id/privateTitle"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="26dp"
+	                  android:text="Private artworks"
+	                  android:gravity="center"
+	                  android:layout_toRightOf="@+id/privacyImg"
+	                  android:layout_alignBaseline="@+id/privacyImg"
+	                  android:textSize="18dp"
+	                  android:textStyle="bold"
+	                  android:textColor="@color/context_menu_color"
+	                  />
+	               <TextView 
+	                  android:layout_width="fill_parent"
+	                  android:layout_height="wrap_content"
+	                  android:text="Nobody can't see your picture,Only you can see in your own Artworks Gallery."
+	                  android:textSize="16dp"
+	                  android:layout_below="@+id/privacyImg"
+	                  android:layout_marginLeft="2dp"
+	                  android:layout_marginTop="5dp"
+	                  android:textColor="@color/context_menu_color"
+	                  />
+	           </RelativeLayout>
+	          
+	      </LinearLayout>
+	       
+	       
+	      
+	     
+	</LinearLayout>
+	
+    
+
+    <RelativeLayout
+        android:layout_width="540dp"
+        android:layout_height="56dp"
+        android:background="@drawable/common_popup_navigation_bg" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:text="Cancel"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit my artworks"
+            android:textColor="@color/popup_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_btn_popup_red"
+            android:text="OK"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+                
+    </RelativeLayout>
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="56dp"
+	     android:background="@drawable/common_popup_navigation_shadow_pattern"/>
+</FrameLayout>

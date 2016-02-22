@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1016dp"
+    android:layout_height="wrap_content" >
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_popup_bg"
+        android:orientation="horizontal"
+        android:layout_marginTop="56dp"
+        android:padding="30dp"
+        >
+	      <LinearLayout
+	         android:layout_width="435dp"
+	         android:layout_height="635dp"
+	         android:orientation="vertical"
+	         android:padding="0dp"
+	         >
+	        <TextView 
+	            android:id="@+id/leftTitle"
+	            android:layout_width="match_parent"
+	            android:layout_height="30dp"
+	            android:textSize="18dp"
+	            android:textStyle="bold"
+	            android:text="Like U list (0)"
+	            android:textColor="@color/popup_list_title"/>
+	        
+			<LinearLayout
+			    android:layout_marginTop="10dp"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/common_inputbox_search_bg"
+	            android:padding="10dp" >
+	
+	            <EditText
+	                android:id="@+id/editKeyword"
+	                android:layout_marginLeft="35dp"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:background="@null"
+	                android:ems="10"
+	                android:hint="Search by Name or Country."
+	                android:imeOptions="actionDone"
+	                android:inputType="textShortMessage"
+	                android:maxLines="1"
+	                android:textSize="18dp" >
+	
+	                <requestFocus />
+	            </EditText>
+	
+	        </LinearLayout>
+	            
+	        <ExpandableListView 
+	            android:id="@+id/leftExpandableList"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_marginTop="10dp"
+	            android:background="@drawable/common_listbox_square_bg"
+	             android:cacheColorHint="@android:color/transparent"
+	             android:divider="@color/list_divider"
+	             android:dividerHeight="1dp"
+	             android:listSelector="@android:color/transparent"
+	             android:groupIndicator="@android:color/transparent"
+	             android:padding="0dp"
+	            >
+	            
+	        </ExpandableListView>
+	        <ListView
+	            android:id="@+id/leftList"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_marginTop="10dp"
+	             android:background="@drawable/common_listbox_square_bg"
+	             android:cacheColorHint="@android:color/transparent"
+	             android:divider="@color/list_divider"
+	             android:dividerHeight="1dp"
+	             android:listSelector="@android:color/transparent"
+	             android:visibility="gone"/>
+	     </LinearLayout>
+	     <LinearLayout
+	         android:layout_width="86dp"
+	         android:layout_height="635dp"
+	         android:orientation="vertical"
+	         android:layout_gravity="center"
+	         android:gravity="center"
+	         >
+	      	<ImageView 
+	      	    android:id="@+id/image1"
+	      	    android:layout_width="wrap_content"
+	      	    android:layout_height="wrap_content"
+	      	    
+	      	    android:src="@drawable/common_member_list_arrow"
+	      	    />
+	      	    
+	      </LinearLayout>
+	      <LinearLayout
+	         android:layout_width="435dp"
+	         android:layout_height="635dp"
+	         android:orientation="vertical"
+	         android:padding="0dp"
+	         >
+	      	 <TextView 
+	            android:id="@+id/rightTitle"
+	            android:layout_width="match_parent"
+	            android:layout_height="30dp"
+	            android:textSize="18dp"
+	            android:textStyle="bold"
+	            android:text="Group member list (0)"
+	            android:textColor="@color/popup_list_title"/>
+	      	 
+	      	 <ListView 
+	            android:id="@+id/rightList"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_marginTop="10dp"
+	             android:background="@drawable/common_listbox_square_bg"
+	             android:cacheColorHint="@android:color/transparent"
+	             android:divider="@color/list_divider"
+	             android:dividerHeight="1dp"
+	             android:listSelector="@android:color/transparent"
+	            >
+	            
+	        </ListView>
+	     </LinearLayout>
+	</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/common_popup_navigation_bg" >
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:text="Close"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit Group member"
+            android:textColor="@color/popup_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_btn_popup_red"
+            android:text="OK"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+                
+    </RelativeLayout>
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="56dp"
+	     android:background="@drawable/common_popup_navigation_shadow_pattern"/>
+</FrameLayout>

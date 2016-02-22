@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="291dp"
+    android:layout_height="322dp"
+    android:background="@drawable/contestpage_list_winner_frame_bg"
+     >
+
+	    <ImageView
+	        android:id="@+id/imageArtwork"
+	        android:layout_width="217dp"
+	        android:layout_height="141dp"
+	        android:layout_marginLeft="37dp"
+	        android:layout_marginTop="103dp"
+	        android:scaleType="centerCrop"
+	        />
+
+	    <ImageView
+	        android:id="@+id/rankBadge"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="227dp"
+	        android:layout_marginLeft="20dp"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/contestpage_list_winner_badge01" />
+ 		
+	    <TextView 
+	        android:id="@+id/winnerName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#786e5a"
+	        android:layout_alignRight="@+id/imageArtwork"
+	        android:layout_below="@+id/imageArtwork"
+	        android:textSize="16dp"
+	        android:textStyle="bold"
+	        android:text="name"
+	        android:layout_marginTop="5dp"
+	        />
+	    
+</RelativeLayout>

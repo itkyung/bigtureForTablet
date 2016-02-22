@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="941dp"
+    android:layout_height="638dp"
+     >
+	<RelativeLayout
+	    android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:padding="0dp"
+        android:background="@drawable/common_designpopup_navigationbar_bg" >
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="53dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            
+            android:background="@drawable/selector_btn_popup_close_red"
+             />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/Open"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/listFiles"
+        android:layout_below="@+id/titleBar"
+        android:layout_alignParentLeft="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="0dp"
+		android:divider="@color/transparent" 
+
+        android:layout_marginTop="34dp"
+        ></ListView>
+
+	
+</RelativeLayout>

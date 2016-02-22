@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="586dp"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/viewContainer"
+        android:layout_width="586dp"
+        android:layout_height="626dp"
+        android:layout_marginTop="56dp"
+        android:padding="30dp"
+        android:background="@drawable/common_popup_bg"
+        android:gravity="center_horizontal"
+        android:measureWithLargestChild="true" 
+        android:orientation="vertical"
+        >
+        
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_inputbox_search_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/editKeyword"
+                android:layout_marginLeft="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/common_ph_search"
+                android:imeOptions="actionDone"
+                android:inputType="textShortMessage"
+                android:maxLines="1"
+                android:textSize="18dp" >
+
+               
+            </EditText>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#ffffffff"
+             android:cacheColorHint="@android:color/transparent"
+             android:divider="@color/list_divider"
+             android:dividerHeight="1dp"
+             android:listSelector="@android:color/transparent"
+            >
+
+        </ListView>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="586dp"
+        android:layout_height="56dp"
+        android:background="@drawable/common_popup_navigation_bg" >
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:text="@string/common_btn_close"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/expert_lb_find_experts"
+            android:textColor="@color/popup_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="56dp"
+	     android:background="@drawable/common_popup_navigation_shadow_pattern"/>
+</FrameLayout>

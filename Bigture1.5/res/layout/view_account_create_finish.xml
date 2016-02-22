@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.account.CreateAccountFinish xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="540dp"
+    android:layout_height="622dp"
+    android:padding="30dp"
+    >
+	
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+	        android:id="@+id/textEmail"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16dp"
+	        android:textColor="@color/red"
+	        />
+        <TextView
+	        android:id="@+id/textTemp1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16dp"
+	        android:textColor="@color/account_popup_text_color"
+	        android:text="으로 이메일이 전송 되었습니다."
+	        />
+    </LinearLayout>
+   <TextView
+        android:id="@+id/textTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+	        android:textColor="@color/account_popup_text_color"
+        android:text="메일에 발송된 링크를 누르면 Bigture에 자유롭게 참여할 수 있습니다."
+        />
+   <TextView
+        android:id="@+id/textTemp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+	        android:textColor="@color/account_popup_text_color"
+        android:text="전송 된 메일이 없나요? 아래 버튼을 눌러 재발송 해 주세요."
+        />
+    
+    
+   <Button
+       android:id="@+id/btnResend"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:background="@drawable/selector_contents_button_red"
+       android:text="Resend Active link"
+       android:textColor="#ffffffff"
+       android:textSize="18dp"
+       android:textStyle="bold" />
+
+   <Button
+       android:id="@+id/btnGoLogin"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="12dp"
+       android:background="@drawable/selector_popup_button"
+       android:text="Go to login page"
+       android:textColor="#ffffffff"
+       android:textSize="18dp"
+       android:textStyle="bold" />
+      
+</com.clockworks.android.tablet.bigture.views.account.CreateAccountFinish>

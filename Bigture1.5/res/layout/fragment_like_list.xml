@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bigturestory_popup_bg_01"
+    android:padding="0dp">
+    
+     <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="392dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+         	<RelativeLayout 
+         	    android:id="@+id/line1"
+         	    android:layout_width="match_parent"
+         	    android:layout_height="52dp"
+         	    android:orientation="horizontal"
+         	    android:background="@color/list_location_bar_bg"
+         	    >
+
+         		<Button
+         		    android:id="@+id/btnAreaBackIcon"
+         		    android:layout_width="wrap_content"
+         		    android:layout_height="wrap_content"
+         		    android:layout_alignParentLeft="true"
+         		    android:background="@drawable/mybigture_listarea_like_list_location_icon" />
+         	    
+         	     <TextView
+	                android:id="@+id/textAreaName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_gravity="center_vertical"
+	                android:layout_toRightOf="@+id/btnAreaBackIcon"
+	                android:gravity="center_vertical"
+	                android:textSize="18dp"
+	                android:layout_marginLeft="0dp"
+	                android:textColor="@color/account_popup_text_color"
+	                android:textStyle="bold"
+	                android:text="All place" />
+         	     
+         	     <TextView 
+         	         android:id="@+id/textMemberCount"
+         	         android:layout_width="wrap_content"
+	               	 android:layout_height="match_parent"
+	                 android:layout_gravity="center_vertical"
+	                 android:gravity="center_vertical"
+	                 android:layout_toRightOf="@+id/textAreaName"
+	                 android:textSize="18dp"
+	                 android:textColor="@color/account_popup_text_color"
+	                 android:textStyle="bold"
+         	         android:text="()"
+         	         />
+         	     
+         	     <Button
+         	         android:id="@+id/btnEditGroup"
+         	         android:layout_width="wrap_content"
+         	         android:layout_height="wrap_content"
+         	         android:layout_alignParentRight="true"
+         	         android:gravity="right"
+         	         android:layout_gravity="right"
+         	         android:visibility="gone"
+         	         android:background="@drawable/selector_btn_edit_group"/>
+         	</RelativeLayout>
+         	<ImageView
+                android:id="@+id/listLineImg1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_divider" />
+         	<Button 
+         	    android:id="@+id/btnListAction"
+         	    android:layout_width="fill_parent"
+         	    android:layout_height="52dp"
+         	    android:paddingLeft="20dp"
+         	    android:drawableLeft="@drawable/mybigture_listarea_like_list_edit_n"
+         	    android:drawablePadding="10dp"
+         	    android:text="Add a group"
+         	    android:textSize="16dp"
+         	    android:textStyle="bold"
+         	    android:textColor="@color/list_btn_text_n"
+         	    android:gravity="left|center_vertical"
+         	    android:background="@drawable/selector_btn_list"
+         	    />
+         	
+
+            <ListView
+                android:id="@+id/lvFriends"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="20dp"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/list_divider"
+                android:dividerHeight="1dp"
+                android:listSelector="@android:color/transparent"
+                android:background="#f5f3ee" >
+
+            </ListView>
+        </LinearLayout>
+		
+        <FrameLayout
+            android:id="@+id/mapContainer"
+            android:layout_width="888dp"
+            android:layout_height="508dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/mybigture_listarea_likelist_map" >
+			<LinearLayout 
+			    android:id="@+id/mapTopLayer"
+			    android:layout_width="match_parent"
+			    android:layout_height="52dp"
+			    android:orientation="horizontal"
+			    android:paddingLeft="37dp"
+			    android:background="@color/map_top_layer" >
+			    <Button 
+			        android:id="@+id/btnLikeU"
+			        android:layout_width="101dp"
+			        android:layout_height="52dp"
+			        android:background="@drawable/selector_btn_map_likeu"
+			        
+			        />
+			    <Button 
+			        android:id="@+id/btnLikeMe"
+			        android:layout_width="101dp"
+			        android:layout_height="52dp"
+			        android:background="@drawable/selector_btn_map_likeme"
+			        />
+			    
+			    
+			</LinearLayout>
+            <ImageView 
+                android:id="@+id/mapDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/map_top_divider" 
+                />
+            
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="157dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="243dp"
+                android:layout_marginTop="133dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="138dp"
+                android:layout_marginTop="233dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="355dp"
+                android:layout_marginTop="367dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="245dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="313dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="279dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter008"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="367dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter009"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="196dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter010"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="301dp"
+                android:layout_marginTop="201dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter011"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="221dp"
+                android:layout_marginTop="252dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter012"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="292dp"
+                android:layout_marginTop="300dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter013"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="652dp"
+                android:layout_marginTop="177dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="658dp"
+                android:layout_marginTop="254dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter015"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="723dp"
+                android:layout_marginTop="254dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter016"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="726dp"
+                android:layout_marginTop="358dp"
+                android:visibility="gone" />
+
+            <com.clockworks.android.tablet.bigture.views.like.MapIcon
+                android:id="@+id/counter017"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="791dp"
+                android:layout_marginTop="334dp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    
+    
+    
+    
+ </RelativeLayout>

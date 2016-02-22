@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+ 
+      <RelativeLayout
+        android:layout_width="358dp"
+        android:layout_height="44dp"
+        android:background="@drawable/common_designpopup_navigationbar_bg" >
+        
+           <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Joined artists"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+           
+      </RelativeLayout>
+      <Button 
+          android:id="@+id/btnEditMember"
+          android:layout_width="354dp"
+          android:layout_height="52dp"
+          android:background="@drawable/selector_bg_like_list_add"
+          android:drawableLeft="@drawable/selector_btn_like_list_add"
+          android:text="Edit class member"
+          android:textColor="@drawable/selector_txt_add"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          android:gravity="left|center_vertical"
+          android:drawablePadding="10dp"
+          android:paddingLeft="10dp"
+          />
+    <LinearLayout 
+        android:layout_width="354dp"
+        android:layout_height="1dp"
+        android:background="@color/divider_1"
+        
+        ></LinearLayout>
+     <LinearLayout 
+         android:layout_width="358dp"
+         android:layout_height="590dp"
+         android:background="@drawable/common_designpopup_contents_bg"
+         android:orientation="vertical"
+         android:paddingLeft="14dp"
+         android:paddingRight="14dp"
+         >
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:gravity="center_vertical"
+             android:textSize="14dp"
+             android:text="@string/label_current_artist"
+             android:textColor="@color/story_text"
+             />
+          <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="@color/divider_1"
+	        ></LinearLayout>
+         <ListView 
+             android:id="@+id/listArtists"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:divider="@color/divider_1"
+             android:dividerHeight="1dp"
+             ></ListView>
+         
+    </LinearLayout>
+
+</LinearLayout>

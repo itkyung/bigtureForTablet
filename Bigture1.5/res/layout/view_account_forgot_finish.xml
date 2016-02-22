@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.account.ForgotPasswordFinish xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="622dp"
+    android:padding="30dp"
+    android:orientation="vertical"
+    >
+	
+	<LinearLayout 
+	    android:id="@+id/successContainer"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    >
+	    <LinearLayout 
+		    android:id="@+id/linear1"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+		    <TextView
+		        android:id="@+id/lableForgotText1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/label_forgot_pwd_3"
+		        android:textStyle="bold"
+		        android:textColor="@color/account_popup_text_color"
+		        android:textSize="16dp" />
+			<TextView
+		        android:id="@+id/textEmail"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/red"
+		        android:layout_marginLeft="3dp"
+		        android:textSize="16dp" />
+			<TextView
+		        android:id="@+id/lableForgotText2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/label_forgot_pwd_4"
+		        android:textStyle="bold"
+		        android:textColor="@color/account_popup_text_color"
+		        android:textSize="16dp" />
+	    </LinearLayout>
+	    <TextView
+	        android:id="@+id/lableForgotText3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="1dp"
+	        android:text="@string/label_forgot_pwd_5"
+	         android:textStyle="bold"
+		        android:textColor="@color/account_popup_text_color"
+	        android:textSize="16dp" />
+	    
+	</LinearLayout>
+    <LinearLayout 
+	    android:id="@+id/failContainer"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	  
+	    >
+  		<TextView
+	        android:id="@+id/lableForgotText3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/label_login_not_exist"
+	        android:textStyle="bold"
+		    android:textColor="@color/account_popup_text_color"
+	        android:textSize="16dp" />
+	     <Button
+	      android:id="@+id/btnGoCreate"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:layout_marginTop="15dp"
+	      android:background="@drawable/selector_popup_button"
+	      android:text="Create Bigture account"
+	      android:textColor="#ffffffff"
+	      android:textSize="16dp"
+	      android:textStyle="bold" />
+   
+     </LinearLayout>
+
+</com.clockworks.android.tablet.bigture.views.account.ForgotPasswordFinish>

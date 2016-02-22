@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="941dp"
+    android:layout_height="620dp"
+    android:background="@drawable/mybigture_popup_postcard_bg"
+     >
+
+    <ImageView
+        android:id="@+id/artworkImg"
+        android:layout_width="450dp"
+        android:layout_height="310dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="183dp" />
+    
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/mybigture_popup_postcard_close_icon" />
+
+    <TextView
+        android:id="@+id/artworkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/artworkImg"
+        android:layout_below="@+id/artworkImg"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/color_popup_menu_text"
+        android:text="Title" />
+
+    <TextView
+        android:id="@+id/artworkOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/artworkTitle"
+        android:layout_alignBottom="@+id/artworkTitle"
+        android:layout_toRightOf="@+id/artworkTitle"
+        android:layout_marginLeft="5dp"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:textColor="@color/color_popup_menu_text"
+        android:text="Owner" />
+
+    <TextView
+        android:id="@+id/artworkDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/artworkOwner"
+        android:layout_alignBottom="@+id/artworkOwner"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/artworkOwner"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:textColor="@color/color_popup_menu_text"
+        android:text="date" />
+
+    <TextView
+        android:id="@+id/artworkOrigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/artworkTitle"
+        android:layout_below="@+id/artworkTitle"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        android:textColor="@color/color_popup_menu_text"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/artworkImg"
+        android:layout_marginLeft="42dp"
+        android:layout_toRightOf="@+id/artworkImg"
+        android:src="@drawable/mybigture_popup_postcard_to_icon" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:hint="(e-mail address)"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnFriend"
+        android:layout_width="38dp"
+        android:layout_height="26dp"
+        android:layout_alignBaseline="@+id/editEmail"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="0dp"
+        android:textSize="16dp"
+        android:textColor="@color/popup_card_friend_count"
+        android:background="@drawable/selector_popup_btn_friend"/>
+       
+    <EditText
+        android:id="@+id/editComment"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/btnFriend"
+        android:layout_below="@+id/editEmail"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="Tell your friends about this Artworks."
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="84dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_contents_button_red"
+        android:text="Send" />
+    
+</RelativeLayout>

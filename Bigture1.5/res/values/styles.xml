@@ -1,0 +1,74 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:textColor">#FF646464</item>
+    </style>
+
+    <style name="FontDarkGray" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#FF646464</item>
+    </style>
+    <style name="FontDarkGray.Small">
+        <item name="android:textSize">10dp</item>
+    </style>
+    <style name="FontDarkGray.Medium">
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="FontDarkGray.Big">
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="FontDarkGray.Bigger">
+        <item name="android:textSize">20dp</item>
+    </style>
+    
+    <style name="FontBrown" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#FF786E5A</item>
+    </style>
+    <style name="FontBrown.Small">
+        <item name="android:textSize">10dp</item>
+    </style>
+    <style name="FontBrown.Medium">
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="FontBrown.Big">
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="FontBrown.Bigger">
+        <item name="android:textSize">20dp</item>
+    </style>
+    
+
+    <style name="WaitDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+     <style name="ArtworksOwnerShadow">
+	    <item name="android:shadowColor">#000000</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">4</item>
+	    <item name="android:alpha">50</item>
+    </style>
+    
+</resources>

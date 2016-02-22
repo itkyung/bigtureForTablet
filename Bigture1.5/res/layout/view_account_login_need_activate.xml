@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.account.LoginNeedActivate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:padding="30dp"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:orientation="vertical" >
+	
+    <TextView
+       android:id="@+id/textEmail10"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="16dp"
+       android:textColor="@color/red"
+       />
+
+   <TextView
+        android:id="@+id/textTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/account_popup_text_color"
+        android:text="@string/label_activate_msg1"
+        />
+   <TextView
+        android:id="@+id/textTemp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/account_popup_text_color"
+        android:text="@string/label_activate_msg2"
+        />
+    
+    
+   <Button
+       android:id="@+id/btnResend"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      
+       android:layout_marginTop="20dp"
+       android:background="@drawable/selector_contents_button_red"
+       android:text="Resend active link"
+       android:textColor="#ffffffff"
+       android:textSize="18dp"
+       android:textStyle="bold" />
+
+      
+</com.clockworks.android.tablet.bigture.views.account.LoginNeedActivate>

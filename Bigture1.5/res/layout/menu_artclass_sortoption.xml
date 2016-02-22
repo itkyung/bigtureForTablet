@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+		
+		<ImageView
+		    android:id="@+id/imageView1"
+		    android:layout_width="160dp"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:src="@drawable/common_tabarea_popup_bar_top" />
+		
+		<Button 
+		    android:id="@+id/menuRecent"
+		    android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_menu_popup_top"
+            android:text="@string/label_recent"
+            android:textSize="16dp"
+            android:textColor="@color/color_popup_menu_text"
+		    />
+		<ImageView 
+		     android:layout_width="160dp"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/common_tabarea_popup_divider"
+		    ></ImageView>
+		<Button 
+		    android:id="@+id/menuClassName"
+		    android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_menu_popup_middle"
+            android:text="Class name"
+            android:textSize="16dp"
+            android:textColor="@color/color_popup_menu_text"
+		    />
+		<ImageView 
+		     android:layout_width="160dp"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/common_tabarea_popup_divider"
+		    ></ImageView>	
+			    		    		    		    	
+		<Button 
+		     android:id="@+id/menuExpertsName"
+		    android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_menu_popup_bottom"
+            android:text="@string/story_po_expertname"
+            android:textSize="16dp"
+            android:textColor="@color/color_popup_menu_text"
+		    />
+    	<ImageView 
+		     android:layout_width="160dp"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/common_tabarea_popup_bar_under"
+		    ></ImageView>
+</LinearLayout>

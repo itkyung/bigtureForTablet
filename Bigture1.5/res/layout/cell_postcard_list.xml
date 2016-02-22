@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.postcard.NormalCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false" >
+
+    <LinearLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.postcard.CardThumbnail
+                android:id="@+id/card1"
+                android:layout_width="400dp"
+                android:layout_height="266dp"
+                android:layout_gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/vwAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mybigture_listarea_postcard_bg"
+                android:clickable="true"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/vmAddImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/mybigture_listarea_postcard_add_icon" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vmAddImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:text="Send a postcard"
+                    android:textColor="#ffcc0000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.postcard.CardThumbnail
+                android:id="@+id/card2"
+                android:layout_width="400dp"
+                android:layout_height="266dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.postcard.CardThumbnail
+                android:id="@+id/card3"
+                android:layout_width="400dp"
+                android:layout_height="266dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+  
+
+</com.clockworks.android.tablet.bigture.views.postcard.NormalCell>

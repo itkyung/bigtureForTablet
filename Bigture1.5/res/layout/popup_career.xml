@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="406dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_popup_navigation_bg">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/mybigture_lb_add_career"
+            android:textColor="@color/popup_title"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:minHeight="38dp"
+            android:text="Cancel"
+            android:textSize="16dp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:minHeight="38dp"
+            android:textSize="16dp"
+            android:text="OK"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="406dp"
+        android:layout_height="293dp"
+        android:background="@drawable/common_popup_bg" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="346dp"
+            android:layout_height="93dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/common_inputbox_2_bg"
+            android:padding="0dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"
+                    android:text="Start"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/startDateLabel"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerVertical="true"
+                    android:text="03.02.12"
+                    android:textColor="@color/popup_menu_text"
+                    android:textSize="16dp" />
+
+              
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"
+                    android:text="End"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/endDateLabel"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+					android:layout_marginRight="13dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Present"
+                    android:gravity="right"
+                    android:textColor="@color/popup_menu_text"
+                    android:textSize="16dp" />
+
+              
+            </RelativeLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="346dp"
+            android:layout_height="131dp"
+            android:layout_alignLeft="@+id/linearLayout1"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/common_inputbox_1_bg"
+            android:gravity="top|left"
+            android:hint="Please enter your career."
+            android:padding="13dp"
+            android:textColor="@color/popup_menu_text"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f3ee"
+    android:orientation="horizontal"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"    
+    android:padding="0dp">
+    
+    <LinearLayout 
+        android:layout_width="393dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        >
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="76dp"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical"
+	        android:padding="0dp"
+	        >
+	        <ImageView 
+	            android:id="@+id/imgAddCareer"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/selector_add_career"/>
+	        
+	        <TextView 
+	            android:id="@+id/txtAddCareer"
+	            android:layout_width="200dp"
+	            android:layout_height="fill_parent"
+	            android:gravity="center_vertical"
+	            android:layout_marginLeft="10dp"
+	            android:textColor="@color/color_career_txt"
+	            android:textStyle="bold"
+	            android:textSize="16dp"
+	            android:text="@string/mybigture_lb_add_career"/>
+	        
+	    </LinearLayout>
+	    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+	        android:id="@+id/careerList"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:dividerHeight="0dp"
+		    android:divider="@color/transparent" 
+		    android:listSelector="@android:color/transparent" 
+		    android:fadingEdge="none"
+	        android:fastScrollEnabled="false"
+	        android:footerDividersEnabled="false"
+	        android:headerDividersEnabled="false"
+	        android:smoothScrollbar="true"
+	        ptr:ptrAnimationStyle="flip"
+	        ptr:ptrHeaderTextColor="@color/list_friend_name">
+	        
+	    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/career_divider"
+        >
+       
+    </LinearLayout>
+  	<LinearLayout 
+        android:layout_width="886dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        >
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="76dp"
+	        android:orientation="horizontal"
+	         android:gravity="center_vertical"
+	        android:padding="0dp"
+	        >
+	        <ImageView 
+	            android:id="@+id/imgAddNews"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	         
+	            android:src="@drawable/selector_add_career"/>
+	        
+	        <TextView 
+	            android:id="@+id/txtAddNews"
+	            android:layout_width="300dp"
+	            android:layout_height="fill_parent"
+	            android:gravity="center_vertical"
+	            android:layout_marginLeft="10dp"
+	            android:textColor="@color/color_career_txt"
+	            android:textStyle="bold"
+	            android:textSize="16dp"
+	            android:text="@string/mybigture_lb_add_news"/>
+	        
+	    </LinearLayout>
+	    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+	        android:id="@+id/newsList"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:dividerHeight="0dp"
+		    android:divider="@color/transparent" 
+		    android:listSelector="@android:color/transparent" 
+		    android:fadingEdge="none"
+	        android:fastScrollEnabled="false"
+	        android:footerDividersEnabled="false"
+	        android:headerDividersEnabled="false"
+	        android:smoothScrollbar="true"
+	        ptr:ptrAnimationStyle="flip"
+	        ptr:ptrHeaderTextColor="@color/list_friend_name">
+	        
+	    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+	    
+  	 </LinearLayout>
+ </LinearLayout>

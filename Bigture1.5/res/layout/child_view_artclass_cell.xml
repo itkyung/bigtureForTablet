@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="282dp"
+    android:layout_height="305dp"
+    android:padding="0dp"
+    android:background="@drawable/artclass_list_canvas_bg" >
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_horizontal"
+        android:maxWidth="220dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/popup_menu_text"
+         />
+
+     <ImageView
+        android:id="@+id/iconNowOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/titleLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/titleLabel"
+        android:src="@drawable/common_icon_nowon" />
+    
+     <ImageButton
+        android:id="@+id/btnFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:src="@drawable/selector_btn_bs_favorite1" />
+     
+     <LinearLayout 
+         android:id="@+id/expertNameContainer"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/titleLabel"
+         android:layout_alignLeft="@+id/titleLabel"
+         android:layout_marginTop="5dp"
+         android:orientation="horizontal"
+         > 
+		   <TextView
+		        android:id="@+id/expertJob"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="14dp"
+		        android:textColor="@color/list_expert_job"
+		        android:text="TextView" />
+         	  
+		   <TextView
+		        android:id="@+id/expertName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="6dp"
+		         android:textSize="16dp"
+		        android:textColor="@color/list_friend_name"
+		        android:text="TextView" />
+     </LinearLayout>
+     
+   
+        
+    <ImageView
+        android:id="@+id/imageArtwork"
+        android:layout_width="270dp"
+        android:layout_height="203dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/artclass_list_canvas_thumbnail_blank" />
+
+    <ImageView
+        android:id="@+id/iconLock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageArtwork"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/artclass_list_lock" />
+
+</RelativeLayout>

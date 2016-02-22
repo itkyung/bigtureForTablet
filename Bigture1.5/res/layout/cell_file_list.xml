@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="12dp" >
+
+     <RelativeLayout 
+        android:id="@+id/drawNewArtworks"
+        android:layout_width="291dp"
+        android:layout_height="247dp"
+        android:background="@drawable/sketchbook_popup_open_artwork_bg"
+        >
+        <ImageView 
+            android:id="@+id/drawImg"
+            android:layout_width="167dp"
+            android:layout_height="116dp"
+            android:src="@drawable/common_draw_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#ba4536"
+            android:text="@string/sketchbook_lb_draw_new"
+            android:layout_marginTop="191dp"
+            />
+        
+    </RelativeLayout>
+    
+    <com.clockworks.android.tablet.bigture.views.sketchbook.dialog.FileThumbnail
+        android:id="@+id/thumb1"
+        android:layout_width="291dp"
+        android:layout_height="247dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+    <com.clockworks.android.tablet.bigture.views.sketchbook.dialog.FileThumbnail
+        android:id="@+id/thumb2"
+        android:layout_width="291dp"
+        android:layout_height="247dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+    <com.clockworks.android.tablet.bigture.views.sketchbook.dialog.FileThumbnail
+        android:id="@+id/thumb3"
+        android:layout_width="291dp"
+        android:layout_height="247dp"
+        android:layout_marginLeft="12dp" />
+
+</LinearLayout>

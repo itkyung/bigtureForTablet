@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="446dp"
+    android:layout_height="wrap_content" >
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_popup_bg"
+        android:layout_marginTop="56dp"
+        android:padding="30dp"
+        android:orientation="vertical"
+        >
+        <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/label_contest_title"
+	        android:textSize="20dp"
+	        android:textColor="@color/popup_menu_text"
+	         />
+        
+	    <ListView 
+	        android:id="@+id/contestList"
+	        android:layout_marginTop="20dp"
+	        android:layout_width="fill_parent"
+        	android:layout_height="78dp"
+	        android:dividerHeight="1dp"
+		    android:divider="@color/send_color_disable" 
+		    android:fadingEdge="none"
+	        android:fastScrollEnabled="false"
+	        android:footerDividersEnabled="false"
+	        android:headerDividersEnabled="false"
+	        android:smoothScrollbar="true"
+
+	        android:choiceMode="singleChoice"
+	        >
+	    </ListView>
+ 		 <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="386dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_contents_button_red"
+            android:text="Submit"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#ffffffff" />
+ 		 
+	</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="446dp"
+        android:layout_height="56dp"
+        android:background="@drawable/common_popup_navigation_bg" >
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:text="Cancel"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Submit to Contest"
+            android:textColor="@color/popup_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+       
+                
+    </RelativeLayout>
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="56dp"
+	     android:background="@drawable/common_popup_navigation_shadow_pattern"/>
+</FrameLayout>

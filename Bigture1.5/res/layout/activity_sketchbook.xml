@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sketchbookRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:clipChildren="true"
+    android:clipToPadding="true" >
+
+    <com.clockworks.android.tablet.bigture.views.sketchbook.WorkLayerView2
+        android:id="@+id/workLayerView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+   
+        android:clipChildren="true" >
+    </com.clockworks.android.tablet.bigture.views.sketchbook.WorkLayerView2>
+
+     <ImageView
+        android:id="@+id/imageDelete"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:src="@drawable/selector_ske_btn_delete"
+        android:visibility="gone" />
+     
+      <LinearLayout
+        android:id="@+id/stickerToolbar"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/imageFlipHorz"
+            android:layout_width="62dp"
+            android:layout_height="52dp"
+            android:src="@drawable/selector_ske_flip_horz" />
+
+        <ImageView
+            android:id="@+id/imageFlipVert"
+            android:layout_width="62dp"
+            android:layout_height="52dp"
+            android:src="@drawable/selector_ske_flip_vert" />
+      
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/leftContainer"
+        android:layout_width="90dp"
+        android:background="@drawable/sketchbook_func_bg_pattern_x"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/leftMenu"
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:gravity="center_horizontal" >
+			<Button
+			    android:id="@+id/btnBack"
+			    android:layout_width="90dp"
+			    android:layout_height="70dp"
+			    android:background="@drawable/selector_sketchbook_back"
+			    />
+			    
+            <LinearLayout
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="#af3529"/>
+			
+            <RelativeLayout
+			    android:id="@+id/btnUndo"
+			    android:layout_width="90dp"
+			    android:layout_height="90dp"
+			    android:background="@drawable/selector_sketchbook_left_btn"
+			    >
+			    <ImageView 
+			        android:id="@+id/btnUndoImg"
+			        android:layout_width="30dp"
+			        android:layout_height="26dp"
+			        android:src="@drawable/sketchbook_func_btn_icon_undo"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="24dp"
+			        />
+			    
+			    <TextView 
+			    	android:id="@+id/btnUndoTitle"
+			    	android:layout_centerHorizontal="true"
+			    	android:layout_below="@+id/btnUndoImg"
+			    	android:layout_marginTop="5dp"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="@string/Undo"
+			    	android:textSize="14dp"
+			    	android:textStyle="bold"
+			    	android:textColor="#ffffff"
+			    	/>
+			  </RelativeLayout>
+            
+            <LinearLayout
+                android:id="@+id/imageView2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="#af3529"/>
+			
+            <RelativeLayout
+			    android:id="@+id/btnRedo"
+			    android:layout_width="90dp"
+			    android:layout_height="90dp"
+			    android:background="@drawable/selector_sketchbook_left_btn"
+			    >
+			    <ImageView 
+			        android:id="@+id/btnRedoImg"
+			        android:layout_width="30dp"
+			        android:layout_height="26dp"
+			        android:src="@drawable/sketchbook_func_btn_icon_redo"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="24dp"
+			        />
+			    
+			    <TextView 
+			    	android:id="@+id/btnRedoTitle"
+			    	android:layout_centerHorizontal="true"
+			    	android:layout_below="@+id/btnRedoImg"
+			    	android:layout_marginTop="5dp"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="@string/Redo"
+			    	android:textSize="14dp"
+			    	android:textStyle="bold"
+			    	android:textColor="#ffffff"
+			    	/>
+			  </RelativeLayout>
+            
+            <LinearLayout
+                android:id="@+id/imageView3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="#af3529"/>
+			
+            <RelativeLayout
+			    android:id="@+id/btnNew"
+			    android:layout_width="90dp"
+			    android:layout_height="90dp"
+			    android:background="@drawable/selector_sketchbook_left_btn"
+			    >
+			    <ImageView 
+			        android:id="@+id/btnNewImg"
+			        android:layout_width="30dp"
+			        android:layout_height="26dp"
+			        android:src="@drawable/sketchbook_func_btn_icon_new"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="24dp"
+			        />
+			    
+			    <TextView 
+			    	android:id="@+id/btnNewTitle"
+			    	android:layout_centerHorizontal="true"
+			    	android:layout_below="@+id/btnNewImg"
+			    	android:layout_marginTop="5dp"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="@string/New"
+			    	android:textSize="14dp"
+			    	android:textStyle="bold"
+			    	android:textColor="#ffffff"
+			    	/>
+			  </RelativeLayout>
+            
+             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="#af3529"/>
+            
+              <RelativeLayout
+				    android:id="@+id/btnOpen"
+				    android:layout_width="90dp"
+				    android:layout_height="90dp"
+				    android:background="@drawable/selector_sketchbook_left_btn"
+				    >
+				    <ImageView 
+				        android:id="@+id/btnOpenImg"
+				        android:layout_width="30dp"
+				        android:layout_height="26dp"
+				        android:src="@drawable/sketchbook_func_btn_icon_open"
+				        android:layout_centerHorizontal="true"
+				        android:layout_marginTop="24dp"
+				        />
+				    
+				    <TextView 
+				    	android:id="@+id/btnOpenTitle"
+				    	android:layout_centerHorizontal="true"
+				    	android:layout_below="@+id/btnOpenImg"
+				    	android:layout_marginTop="5dp"
+				    	android:layout_width="wrap_content"
+				    	android:layout_height="wrap_content"
+				    	android:text="@string/Open"
+				    	android:textSize="14dp"
+				    	android:textStyle="bold"
+				    	android:textColor="#ffffff"
+				    	/>
+				  </RelativeLayout>
+             
+             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="#af3529"/>
+			
+             <RelativeLayout
+			    android:id="@+id/btnSave"
+			    android:layout_width="90dp"
+			    android:layout_height="90dp"
+			    android:background="@drawable/selector_sketchbook_left_btn"
+			    >
+			    <ImageView 
+			        android:id="@+id/btnSaveImg"
+			        android:layout_width="30dp"
+			        android:layout_height="26dp"
+			        android:src="@drawable/sketchbook_func_btn_icon_save"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="24dp"
+			        />
+			    
+			    <TextView 
+			    	android:id="@+id/btnSaveTitle"
+			    	android:layout_centerHorizontal="true"
+			    	android:layout_below="@+id/btnSaveImg"
+			    	android:layout_marginTop="5dp"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="@string/Save"
+			    	android:textSize="14dp"
+			    	android:textStyle="bold"
+			    	android:textColor="#ffffff"
+			    	/>
+			  </RelativeLayout>
+            
+              <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="#af3529"/>
+			
+              <RelativeLayout
+			    android:id="@+id/btnShare"
+			    android:layout_width="90dp"
+			    android:layout_height="90dp"
+			    android:background="@drawable/selector_sketchbook_left_btn"
+			    >
+			    <ImageView 
+			        android:id="@+id/btnShareImg"
+			        android:layout_width="30dp"
+			        android:layout_height="26dp"
+			        android:src="@drawable/sketchbook_func_btn_icon_share"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="24dp"
+			        />
+			    
+			    <TextView 
+			    	android:id="@+id/btnShareTitle"
+			    	android:layout_centerHorizontal="true"
+			    	android:layout_below="@+id/btnShareImg"
+			    	android:layout_marginTop="5dp"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="@string/share"
+			    	android:textSize="14dp"
+			    	android:textStyle="bold"
+			    	android:textColor="#ffffff"
+			    	/>
+			  </RelativeLayout>
+			  <RelativeLayout
+			    android:id="@+id/btnSend"
+			    android:layout_width="90dp"
+			    android:layout_height="90dp"
+			    android:background="@drawable/selector_sketchbook_left_btn"
+			    android:visibility="gone"
+			    >
+			    <ImageView 
+			        android:id="@+id/btnSendImg"
+			        android:layout_width="30dp"
+			        android:layout_height="26dp"
+			        android:src="@drawable/sketchbook_func_btn_icon_postcard"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="24dp"
+			        />
+			    
+			    <TextView 
+			    	android:id="@+id/btnSendTitle"
+			    	android:layout_centerHorizontal="true"
+			    	android:layout_below="@+id/btnSendImg"
+			    	android:layout_marginTop="5dp"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="@string/Send"
+			    	android:textSize="14dp"
+			    	android:textStyle="bold"
+			    	android:textColor="#ffffff"
+			    	/>
+			  </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="#af3529"/>
+        </LinearLayout>	   
+    </FrameLayout>
+	<FrameLayout
+        android:id="@+id/leftToolbarContainer"
+        android:layout_width="122dp"
+        android:layout_height="fill_parent"
+        android:background="#f5f4ee"
+        android:layout_marginLeft="90dp"
+         >
+    	<ScrollView 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    >
+    	    <LinearLayout 
+    	        android:layout_width="fill_parent"
+    	        android:layout_height="wrap_content"
+    	        android:orientation="vertical"
+    	        android:paddingLeft="32dp"
+    	        android:paddingTop="22dp"
+    	        android:paddingBottom="22dp"
+    	        >
+			    <Button 
+    	            android:id="@+id/tbBrushSize"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_brushsize_6"
+    	            />
+			    
+    	        <RelativeLayout 
+    	            android:id="@+id/imageColorSwitch"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            >
+    	            <ImageView
+		                android:id="@+id/imageSelectedColor"
+		                android:layout_width="45dp"
+		                android:layout_height="45dp"
+		                android:layout_marginLeft="4dp"
+		                android:layout_marginTop="4dp"
+		                android:background="@drawable/palette_round" />
+    	        </RelativeLayout>
+    	        
+    	        <Button 
+    	            android:id="@+id/tbBack"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_background"
+    	            />
+    	        
+    	        <Button 
+    	            android:id="@+id/tbPen"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_brush"
+    	            />
+    	        <Button 
+    	            android:id="@+id/tbMBrush"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_magicbrush"
+    	            />
+    	        <Button 
+    	            android:id="@+id/tbAreaPaint"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_areapaint"
+    	            />
+    	        <Button 
+    	            android:id="@+id/tbEraser"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_eraser"
+    	            />
+    	        
+    	        <Button 
+    	            android:id="@+id/tbSticker"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_basicsticker"
+    	            />
+    	        
+    	        <Button 
+    	            android:id="@+id/tbYou"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_youskit"
+    	            />
+    	        
+    	        <Button 
+    	            android:id="@+id/tbAqua"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_aquakit"
+    	            android:visibility="gone"
+    	            />
+    	         <Button 
+    	            android:id="@+id/tbIsland"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_enchantkit"
+    	            />
+    	         <Button 
+    	            android:id="@+id/tbKorean"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_koreankit"
+    	            />
+    	         <Button 
+    	            android:id="@+id/tbWorld"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_worldfamouskit"
+    	            />
+    	        <Button 
+    	            android:id="@+id/tbInApp"
+    	            android:layout_width="76dp"
+    	            android:layout_height="56dp"
+    	            android:layout_marginTop="18dp"
+    	            android:background="@drawable/selector_ske_tool_btn"
+    	            android:drawableLeft="@drawable/sketchbook_tool_icon_lock"
+    	            android:visibility="gone"
+    	            />
+    	    
+    	        
+    	    </LinearLayout>
+    	</ScrollView>     
+	</FrameLayout>
+    
+	<LinearLayout 
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    android:orientation="vertical"
+	    android:visibility="gone"
+	    >
+	    <Button android:id="@+id/imageLayerUp"
+	        android:layout_width="10dp"
+	        android:layout_height="10dp"
+	        />
+	      <Button android:id="@+id/imageLayerDown"
+	          android:layout_width="10dp"
+	        android:layout_height="10dp"
+	        />
+	    
+	</LinearLayout>
+	
+	
+</FrameLayout>

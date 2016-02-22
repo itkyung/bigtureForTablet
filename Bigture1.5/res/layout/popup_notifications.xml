@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="368dp"
+    android:layout_height="592dp"
+    android:gravity="center"
+    android:orientation="vertical" 
+    android:padding="0dp"
+    android:background="@drawable/common_designpopup_contents_bg">
+ 
+      <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="44dp"
+        android:background="@drawable/common_designpopup_navigationbar_bg" >
+        
+           <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Notice"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+           
+      </RelativeLayout>
+      <ListView 
+          android:id="@+id/listNotifications"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:divider="@color/divider_1"
+          android:dividerHeight="1dp"
+          ></ListView>
+</LinearLayout>

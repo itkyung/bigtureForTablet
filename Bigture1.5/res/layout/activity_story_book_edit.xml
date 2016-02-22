@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cab188" >
+
+    <fragment android:name="com.clockworks.android.tablet.bigture.fragment.common.TitleBar"
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+         
+    <com.clockworks.android.tablet.bigture.views.story.page.CustomViewPager
+        android:id="@+id/viewPager1"
+        android:layout_width="901dp"
+        android:layout_height="633dp"
+        android:layout_below="@+id/titleBar"/>
+    
+    <SeekBar
+      	android:id="@+id/seekBar1"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPager1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="220dp"
+        android:max="100"
+ 		android:progress="0"
+ 		android:thumb="@drawable/circle_thumb"
+ 		android:thumbOffset="1dp"
+ 		android:maxHeight="2dp"
+ 		android:minHeight="2dp"
+ 		android:paddingLeft="1dp"
+        android:progressDrawable="@drawable/story_page_seekbar"
+         />
+	
+	<TextView 
+        android:id="@+id/pageText"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignLeft="@+id/seekBar1"
+        android:layout_below="@+id/seekBar1"
+        android:layout_marginTop="5dp"
+        android:text="1/1"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#73573a"
+        />
+	
+   	
+   	 <Button 
+        android:id="@+id/btnAddPage"
+        android:layout_width="32dp"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_btn_add_page"
+        android:layout_alignRight="@+id/viewPager1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginRight="38dp"
+        />
+   	
+    <com.clockworks.android.tablet.bigture.views.story.page.ShareStoryButton
+        android:id="@+id/btnShare"
+        android:layout_width="364dp"
+        android:layout_height="137dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="76dp"
+        />
+	
+    <LinearLayout 
+        android:layout_width="364dp"
+        android:layout_height="1dp"
+        android:background="@color/story_edit_divider"
+        android:layout_marginTop="213dp"
+        android:layout_alignParentRight="true"
+        ></LinearLayout>
+    <com.clockworks.android.tablet.bigture.views.story.page.SaveDraftButton
+        android:id="@+id/btnDraft"
+        android:layout_width="364dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="214dp"
+        android:layout_alignParentRight="true"
+        />
+    
+
+</RelativeLayout>

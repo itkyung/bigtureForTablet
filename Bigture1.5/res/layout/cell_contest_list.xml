@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.contest.ContestListCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="68dp"
+    android:paddingRight="68dp"
+    
+    >
+		<FrameLayout 
+		    android:id="@+id/contestImgWrapper"
+		    android:layout_width="318dp"
+		    android:layout_height="284dp"
+		    android:background="@drawable/contest_list_frame_bg_nowon"
+		    >
+		     <ImageView
+	            android:id="@+id/imageContest"
+	            android:layout_width="268dp"
+	            android:layout_height="205dp"
+	            android:scaleType="centerCrop"
+	            android:layout_marginLeft="25dp"
+	            android:layout_marginTop="51dp"
+	            />
+	        <TextView 
+	            android:id="@+id/contestNowOnMsg"
+	            android:layout_width="268dp"
+	            android:layout_height="37dp"
+	            android:gravity="center"
+	            android:background="@color/white"
+	            android:text="@string/contest_lb_could_be_u"
+	            android:layout_marginLeft="25dp"
+	            android:layout_marginTop="235dp"
+	            android:textSize="20dp"
+	            android:textStyle="bold"
+	            android:textColor="@color/text_color_hint"
+	            />
+		</FrameLayout>
+ 	
+       
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="40dp"
+            >
+            
+            <TextView
+		        android:id="@+id/titleLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:text="Happy Holloween!"
+		        android:padding="0dp"
+		        android:gravity="top"
+		        android:textSize="30dp"
+		        android:maxLines="1"
+		        android:textColor="@color/list_friend_name"
+		        android:textStyle="bold" />
+             
+            <ImageView 
+                android:id="@+id/nowonImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/titleLabel"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/contest_list_icon_nowon"
+                />
+            
+            
+             <TextView
+		        android:id="@+id/rangeLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/titleLabel"
+		        android:layout_marginTop="14dp"
+		        android:text="03.01.2013 to 05.31.2013"
+		        android:textSize="16dp"
+		        android:textColor="@color/tab_text_p"
+		        android:maxLines="1"
+		         />  
+            	
+             <TextView
+                 android:id="@+id/contestDesc"
+                 android:layout_width="792dp"
+                 android:layout_height="96dp"
+                 android:textSize="16dp"
+		         android:textColor="@color/tab_text_p"
+                 android:layout_below="@+id/rangeLabel"
+                 android:layout_marginTop="16dp"
+                 android:visibility="gone"
+                 android:text="We have..."/>
+             
+             <Button 
+                 android:id="@+id/btnSubmit"
+                 android:layout_width="180dp"
+                 android:layout_height="39dp"
+                 android:layout_below="@+id/contestDesc"
+                 android:layout_marginTop="24dp"
+                 android:text="@string/contest_btn_prticipate"
+                 android:textColor="@color/white"
+                 android:textSize="16dp"
+                 android:textStyle="bold"
+                 android:background="@drawable/selector_btn_popup_red"
+                
+                 />
+             
+             <RelativeLayout 
+                 android:id="@+id/winnerWrapper"
+                 android:layout_width="wrap_content"
+                 android:layout_height="50dp"
+                 android:layout_below="@+id/contestDesc"
+                 android:layout_marginTop="16dp"
+                  android:visibility="gone"
+                 >
+                 <FrameLayout 
+                     android:id="@+id/winnerProfileWrapper"
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                     android:background="@drawable/contest_list_winner_profile_bg"
+                     >
+                     <ImageView 
+                         android:id="@+id/winnerProfile"
+                         android:layout_width="44dp"
+                         android:layout_height="44dp"
+                         android:layout_marginLeft="3dp"
+                         android:layout_marginTop="2dp"
+                         android:scaleType="centerCrop"
+                         android:src="@drawable/contest_list_winner_profile_default"
+                         />
+                     
+                 </FrameLayout>
+
+                 <TextView 
+                     android:id="@+id/winnerName"
+                     android:layout_height="wrap_content" 
+                     android:layout_width="wrap_content"
+                     android:layout_toRightOf="@+id/winnerProfileWrapper"
+                     android:layout_marginLeft="5dp"
+                     android:layout_alignParentBottom="true"
+                     android:text="Emily"
+                     android:textSize="20dp"
+                     android:textStyle="bold"
+                     android:textColor="@color/text_color_hint"
+                     />
+                 
+             </RelativeLayout>
+             
+        </RelativeLayout>
+   	
+</com.clockworks.android.tablet.bigture.views.contest.ContestListCell>

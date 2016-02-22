@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuContainer"
+    android:layout_width="match_parent"
+    android:layout_height="47dp"
+    android:background="#fdfbf4"
+    android:clipChildren="false" >
+   
+
+    <ImageView
+        android:id="@+id/ivSeperator1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="36dp"
+        android:src="@drawable/common_tabarea_devider_01" />
+
+    <TextView
+        android:id="@+id/tvMenu1"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        android:layout_toRightOf="@+id/ivSeperator1"
+        android:gravity="center"
+        android:text="My Class"
+        android:textColor="@color/tab_text_p"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/ivSeperator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvMenu1"
+        android:src="@drawable/common_tabarea_devider_01" />
+
+    <TextView
+        android:id="@+id/tvMenu2"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        android:layout_toRightOf="@+id/ivSeperator2"
+        android:gravity="center"
+        android:text="Collection"
+        android:textColor="@color/tab_text_n"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/ivSeperator3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvMenu2"
+        android:src="@drawable/common_tabarea_devider_01" />
+
+    <TextView
+        android:id="@+id/tvMenu3"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+       
+        android:layout_toRightOf="@+id/ivSeperator3"
+        android:gravity="center"
+        android:text="Hot"
+        android:textColor="@color/tab_text_n"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/ivSeperator4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvMenu3"
+        android:src="@drawable/common_tabarea_devider_01" />
+
+    <TextView
+        android:id="@+id/tvMenu4"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        
+        android:layout_toRightOf="@+id/ivSeperator4"
+        android:gravity="center"
+        android:text="@string/common_tab_all"
+        android:textColor="@color/tab_text_n"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/ivSeperator5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvMenu4"
+        android:src="@drawable/common_tabarea_devider_01" />
+
+    <TextView
+        android:id="@+id/tvMenu5"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        
+        android:layout_toRightOf="@+id/ivSeperator5"
+        android:gravity="center"
+        android:text="All"
+        android:textColor="@color/tab_text_n"
+        android:textSize="18dp" />
+    
+    <ImageView
+        android:id="@+id/ivSeperator6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvMenu5"
+        android:src="@drawable/common_tabarea_devider_01" />
+
+     <TextView
+        android:id="@+id/tvMenu6"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+       
+        android:layout_toRightOf="@+id/ivSeperator6"
+        android:gravity="center"
+        android:text="@string/common_tab_all"
+        android:textColor="@color/tab_text_n"
+        android:textSize="18dp" />
+     
+    <ImageView
+        android:id="@+id/ivSeperator7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvMenu6"
+        android:src="@drawable/common_tabarea_devider_01" /> 
+      
+    <RelativeLayout
+        android:id="@+id/ivMark1"
+        android:layout_width="150dp"
+        android:layout_height="13dp"
+        android:layout_alignLeft="@+id/tvMenu1"
+        android:layout_marginTop="38dp"
+       
+        android:background="@drawable/common_tabarea_select" />
+
+    <RelativeLayout
+        android:id="@+id/ivMark2"
+        android:layout_width="150dp"
+        android:layout_height="13dp"
+        android:layout_alignLeft="@+id/tvMenu2"
+        android:layout_marginTop="38dp"
+      
+        android:background="@drawable/common_tabarea_select"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ivMark3"
+        android:layout_width="150dp"
+        android:layout_height="13dp"
+        android:layout_alignLeft="@+id/tvMenu3"
+        android:layout_marginTop="38dp"
+       
+        android:background="@drawable/common_tabarea_select"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ivMark4"
+        android:layout_width="150dp"
+        android:layout_height="13dp"
+        android:layout_alignLeft="@+id/tvMenu4"
+        android:layout_marginTop="38dp"
+       
+        android:background="@drawable/common_tabarea_select"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ivMark5"
+        android:layout_width="150dp"
+        android:layout_height="13dp"
+        android:layout_alignLeft="@+id/tvMenu5"
+        android:layout_marginTop="38dp"
+        
+        android:background="@drawable/common_tabarea_select"
+        android:visibility="gone" />
+    
+    <RelativeLayout
+        android:id="@+id/ivMark6"
+        android:layout_width="150dp"
+        android:layout_height="13dp"
+        android:layout_alignLeft="@+id/tvMenu6"
+        android:layout_marginTop="38dp"
+        
+        android:background="@drawable/common_tabarea_select"
+        android:visibility="gone" />
+    
+    
+     <LinearLayout
+          android:id="@+id/tabAction1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="15dp"
+          android:gravity="center_vertical"
+          android:visibility="gone" >
+
+          <TextView
+              android:id="@+id/tabSortLabel1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+              android:text="@string/common_tab_all"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/imageDown2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="30dp"
+              android:src="@drawable/common_tabarea_left_arrow_icon" />
+          
+          <TextView
+              android:id="@+id/tabSortLabel2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+              android:text="@string/label_recent"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/imageDown3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="30dp"
+              android:src="@drawable/common_tabarea_left_arrow_icon" />
+      </LinearLayout>
+      
+      <LinearLayout
+          android:id="@+id/tabAction2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="15dp"
+          android:gravity="center_vertical"
+          android:visibility="gone" >
+
+          <TextView
+              android:id="@+id/tabSortLabel3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+              android:text="@string/common_tab_all"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/imageDown4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="30dp"
+              android:src="@drawable/common_tabarea_left_arrow_icon" />
+      </LinearLayout>
+      
+      
+      <LinearLayout
+          android:id="@+id/tabAction3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="15dp"
+          android:gravity="center_vertical"
+          android:visibility="gone" >
+
+          <TextView
+              android:id="@+id/tabSortLabel4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+              android:text="@string/label_recent"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/imageDown5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="30dp"
+              android:src="@drawable/common_tabarea_left_arrow_icon" />
+      </LinearLayout>
+      
+      <LinearLayout  android:id="@+id/tabFindFriend"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="22dp"
+          android:gravity="center_vertical"
+          android:visibility="gone" >
+        
+	      <Button 
+	          android:id="@+id/btnFindFriend"
+	          android:layout_width="200dp"
+	          android:layout_height="47dp"
+	          android:drawableLeft="@drawable/selector_btn_find_icon"
+         	  android:drawablePadding="0dp"
+         	  android:text="@string/mybigture_lb_find_friends"
+      	      android:textSize="18dp"
+      	      android:textStyle="bold"
+      	      android:textColor="@color/tab_find_text"
+  			  android:gravity="left|center_vertical"
+	          android:background="@drawable/selector_btn_find"
+	      />
+	      
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/tabCardMenu"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="15dp"
+          android:gravity="center_vertical"
+          android:visibility="gone" >
+
+          <TextView
+              android:id="@+id/tabCardLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+              android:text="Received"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/imageDown4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="30dp"
+              android:src="@drawable/common_tabarea_left_arrow_icon" />
+      </LinearLayout>
+      
+</RelativeLayout>

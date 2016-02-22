@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="400dp"
+    android:layout_height="266dp"
+    android:paddingRight="13dp"
+    android:background="@drawable/mybigture_listarea_postcard_bg" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/mybigture_listarea_postcard_stamp_icon" />
+
+    <ImageView
+        android:id="@+id/imageArtwork"
+        android:layout_width="167dp"
+        android:layout_height="116dp"
+        android:layout_marginLeft="13dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="45dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/cardOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageArtwork"
+        android:layout_alignTop="@+id/imageArtwork"
+        android:layout_marginLeft="12dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:textColor="@color/tab_text_p"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/cardComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cardOwner"
+        android:layout_below="@+id/cardOwner"
+        android:textSize="16dp"
+        android:maxLines="5"
+        android:textColor="@color/tab_text_p"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/cardDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:textSize="14dp"
+        android:textColor="@color/tab_text_p"
+        android:text="07.07.2013" />
+
+    <ImageView
+        android:id="@+id/iconNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cardDate"
+        android:layout_marginLeft="1dp"
+        android:layout_toRightOf="@+id/cardDate"
+        android:src="@drawable/mybigture_listarea_like_list_icon_new" />
+    
+</RelativeLayout>

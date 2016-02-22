@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.artclass.ClassShortCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false" >
+
+    <LinearLayout
+        android:id="@+id/classContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="0dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.artclass.ClassThumbnail
+                android:id="@+id/class1"
+                android:layout_width="282dp"
+                android:layout_height="305dp" 
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.artclass.ClassThumbnail
+                android:id="@+id/class2"
+                android:layout_width="282dp"
+                android:layout_height="305dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.artclass.ClassThumbnail
+                android:id="@+id/class3"
+                android:layout_width="282dp"
+                android:layout_height="305dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</com.clockworks.android.tablet.bigture.views.artclass.ClassShortCell>

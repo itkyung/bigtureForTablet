@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.story.page.AfterReadPage xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="902dp"
+    android:layout_height="635dp" >
+
+    <RelativeLayout
+        android:layout_width="902dp"
+        android:layout_height="635dp"
+        android:background="@drawable/bigturestorypage_book_paper_bg" >
+		
+      	  <TextView
+              android:id="@+id/titleLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="46dp"
+              android:layout_marginLeft="127dp"
+              android:textSize="20dp"
+              android:textStyle="bold"
+              android:textColor="#555555"
+              android:text="@string/story_lb_afterreading_title" />
+        	  
+         <RelativeLayout
+             android:id="@+id/afterBg"
+             android:layout_width="688dp"
+             android:layout_height="478dp"
+             android:layout_below="@+id/titleLabel"
+             android:layout_alignLeft="@+id/titleLabel"
+             android:layout_marginTop="26dp"
+             android:background="@drawable/bigturestorypage_book_afterreading_bg"
+             >
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="68dp"
+                 android:text="@string/story_lb_afterreading_title"
+                 android:textSize="32dp"
+                 android:textColor="#d34b46"
+                 android:gravity="center"
+                 />
+             
+         </RelativeLayout>
+          
+    </RelativeLayout>
+</com.clockworks.android.tablet.bigture.views.story.page.AfterReadPage>

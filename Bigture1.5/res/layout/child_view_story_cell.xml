@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="272dp"
+    android:layout_height="294dp"
+    android:background="#ffffff" >
+	
+    <RelativeLayout 
+   	 android:layout_width="272dp"
+   	 android:layout_height="294dp"
+   	    >     
+         <TextView
+	        android:id="@+id/titleLabel"
+	        android:layout_width="250dp"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="42dp"
+	        android:gravity="center_horizontal"
+	        android:maxWidth="220dp"
+	        android:text="TextViewadsfasdfasdfdsafdaasdfsda"
+	        android:textSize="20dp"
+	        android:textStyle="bold"
+	        android:ellipsize="end"
+	        android:singleLine="true"
+	        android:textColor="@color/story_text"
+	         />
+	
+	
+	    <ImageButton
+	        android:id="@+id/btnFavorite"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:background="@null"
+	        android:src="@drawable/selector_btn_bs_favorite1" />
+	
+	     <ImageButton
+	        android:id="@+id/imageDelete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+	        android:background="@null"
+	        android:visibility="gone"
+	        android:src="@drawable/selector_btn_story_book_edit" />
+	     
+	     <TextView
+	        android:id="@+id/nameLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/titleLabel"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="3dp"
+	        android:text="Linda Loaring"
+	        android:textSize="14dp"
+	        android:textStyle="bold"
+	        android:textColor="@color/story_text"
+	         />
+	     
+	    <ImageView
+	        android:id="@+id/imageArtwork"
+	        android:layout_width="272dp"
+	        android:layout_height="198dp"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/bigturestory_list_book_thumbnail_blank" />
+	        
+	    <LinearLayout 
+	        android:id="@+id/draftIcon"
+	        android:layout_width="53dp"
+	        android:layout_height="26dp"
+	        android:layout_alignTop="@+id/imageArtwork"
+	        android:layout_alignParentRight="true"
+	        android:orientation="vertical"
+	        android:gravity="center"
+	        android:visibility="gone"
+	        android:background="@drawable/bigturestory_list_book_icon_draft">
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="draft"
+	            android:textColor="@color/white"
+	            android:textSize="16dp"
+	            android:textStyle="italic"
+	            />
+	        
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/bigturestory_list_book_bg_shadow"
+	        ></LinearLayout>
+   </RelativeLayout>
+    
+</FrameLayout>

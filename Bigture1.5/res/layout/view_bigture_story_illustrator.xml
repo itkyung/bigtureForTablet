@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.story.page.IllustratorPage xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="902dp"
+    android:layout_height="635dp" >
+
+    <RelativeLayout
+        android:layout_width="902dp"
+        android:layout_height="635dp"
+        android:background="@drawable/bigturestorypage_book_paper_bg" >
+		
+      	  <TextView
+              android:id="@+id/titleLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="47dp"
+              android:layout_marginLeft="125dp"
+              android:textSize="20dp"
+              android:textStyle="bold"
+              android:textColor="#555555"
+              android:text="Illustrator(0)" />
+        	  
+          <ListView 
+              android:id="@+id/listView"
+              android:layout_width="690dp"
+              android:layout_height="500dp"
+              android:layout_below="@+id/titleLabel"
+              android:layout_alignLeft="@+id/titleLabel"
+              android:dividerHeight="0dp"
+              android:divider="@color/transparent"
+              ></ListView>
+          
+          <LinearLayout 
+              android:layout_width="690dp"
+              android:layout_height="41dp"
+              android:layout_marginBottom="5dp"
+              android:layout_alignParentBottom="true"
+              android:layout_alignLeft="@+id/titleLabel"
+              android:background="@drawable/bigturestorypage_book_paper_text_scroll_pattern"
+              ></LinearLayout>
+          
+    </RelativeLayout>
+</com.clockworks.android.tablet.bigture.views.story.page.IllustratorPage>

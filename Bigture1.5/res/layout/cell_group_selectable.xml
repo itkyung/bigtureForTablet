@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="52dp"
+	android:padding="0dp"
+    >
+    
+   <LinearLayout 
+       android:id="@+id/cellActionWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="1dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+       >
+        <Button
+	        android:id="@+id/btnGroupSelect"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:background="@drawable/selector_member_checkbox"
+	        android:visibility="visible" />
+       
+   </LinearLayout>
+    
+     
+   <TextView 
+       android:id="@+id/groupTitleLabel"
+       android:layout_width="wrap_content"
+       android:layout_height="52dp"
+       android:layout_gravity="center_vertical"
+       android:gravity="center_vertical"
+       android:layout_marginLeft="16dp"
+       android:layout_toRightOf="@+id/cellActionWrapper"
+       android:text="Group"
+       android:textSize="18dp"
+       android:textStyle="bold"
+       android:textColor="@color/account_popup_text_color"
+       />
+    
+    
+    <ImageView
+        android:id="@+id/imgFold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/common_fold_arrow_close"
+        android:visibility="visible" />
+	
+    
+    
+</RelativeLayout>

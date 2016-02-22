@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.artclass.ArtworkCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false" >
+
+    <LinearLayout
+        android:id="@+id/artworksContainer"
+        android:layout_width="match_parent"
+        android:layout_height="273dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="18dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+     		<com.clockworks.android.tablet.bigture.views.artwork.ArtworkThumbnail
+		        android:id="@+id/cell1"
+		        android:layout_width="291dp"
+		        android:layout_height="253dp"
+		        android:visibility="gone"
+		         />
+
+            <RelativeLayout
+                android:id="@+id/vwAdd"
+                android:layout_width="291dp"
+                android:layout_height="253dp"
+                android:background="@drawable/common_artwork_bg"
+                android:clickable="true"
+                android:visibility="visible" >
+				
+                 <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_trydraw_icon" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+        	<com.clockworks.android.tablet.bigture.views.artwork.ArtworkThumbnail
+		        android:id="@+id/cell2"
+		        android:layout_width="291dp"
+		        android:layout_height="253dp"
+		         />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+      		<com.clockworks.android.tablet.bigture.views.artwork.ArtworkThumbnail
+		        android:id="@+id/cell3"
+		        android:layout_width="291dp"
+		        android:layout_height="253dp"
+		       />
+             
+        </LinearLayout>
+
+     
+
+    </LinearLayout>
+
+
+</com.clockworks.android.tablet.bigture.views.artclass.ArtworkCell>

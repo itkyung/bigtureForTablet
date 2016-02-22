@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.artwork.ArtworkDetailCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/contentView"
+        android:layout_width="726dp"
+        android:layout_height="650dp"
+       	android:paddingLeft="29dp"
+       	android:paddingRight="29dp"
+        android:background="@drawable/artworkspage_image_bg" >
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"
+            android:text="Title"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="28dp"
+            android:textColor="@color/popup_list_title"
+            android:textStyle="bold" />
+		     
+        <TextView
+            android:id="@+id/dateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/titleLabel"
+            android:layout_below="@+id/titleLabel"
+            android:layout_marginTop="6dp"
+            android:text="1 day ago"
+            android:textColor="@color/tab_text_p"
+            android:textSize="12dp" />
+        
+         <LinearLayout
+             android:id="@+id/stickers"
+             android:layout_width="wrap_content"
+             android:layout_height="35dp"
+             android:layout_alignParentRight="true"
+             android:layout_alignTop="@+id/titleLabel"
+             android:gravity="right|center_vertical" >
+
+             <ImageView
+                 android:id="@+id/imageView1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/bigturestory_afterleading_page_sticker_line" />
+
+             <ImageView
+                 android:id="@+id/iconLove"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="8dp"
+                 android:src="@drawable/artworkspage_image_icon_sticker_love" />
+
+             <TextView
+                 android:id="@+id/loveCountLabel"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="24"
+                 android:textSize="14dp" />
+
+             <ImageView
+                 android:id="@+id/iconAwesome"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="15dp"
+                 android:src="@drawable/artworkspage_image_icon_sticker_awesome" />
+
+             <TextView
+                 android:id="@+id/awesomeCountLabel"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="24"
+                 android:textSize="14dp" />
+
+             <ImageView
+                 android:id="@+id/iconWow"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="15dp"
+                 android:src="@drawable/artworkspage_image_icon_sticker_wow" />
+
+             <TextView
+                 android:id="@+id/wowCountLabel"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="24"
+                 android:textSize="14dp" />
+
+             <ImageView
+                 android:id="@+id/iconFantastic"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="15dp"
+                 android:src="@drawable/artworkspage_image_icon_sticker_fantastic" />
+
+             <TextView
+                 android:id="@+id/fantasticCountLabel"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="24"
+                 android:textSize="14dp" />
+
+             <ImageView
+                 android:id="@+id/iconFun"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="15dp"
+                 android:src="@drawable/artworkspage_image_icon_sticker_fun" />
+
+             <TextView
+                 android:id="@+id/funCountLabel"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="24"
+                 android:textSize="14dp" />
+
+         </LinearLayout>
+
+        <RelativeLayout 
+            android:id="@+id/imageContainer"
+            android:layout_width="668dp"
+            android:layout_height="501dp"
+            android:layout_below="@+id/dateLabel"
+            android:layout_alignLeft="@+id/dateLabel"
+            android:layout_marginTop="13dp"
+            >
+            <ImageView
+	            android:id="@+id/imageArtwork"
+	            android:layout_width="668dp"
+	            android:layout_height="501dp"
+	            android:scaleType="centerCrop"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:src="@drawable/artworkspage_image_default"
+	          />
+            
+            <Button 
+                android:id="@+id/imageContestBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/common_contest_winner_badge_list"
+                android:visibility="gone"
+                android:text="Contest"
+                android:textColor="@color/white"
+                android:gravity="left|center"
+                android:paddingLeft="60dp"
+                android:textStyle="bold"
+                />
+            
+            <ImageView
+                android:id="@+id/imageOpen"
+                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:background="@drawable/artworkspage_image_icon_private"/>
+            
+            
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:paddingLeft="96dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="@color/artwork_transparent_bg"
+                >
+              	
+		        <TextView
+		            android:id="@+id/nameLabel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="15dp"
+		            android:layout_alignParentTop="true"
+		            android:layout_marginTop="11dp"
+		            android:textSize="18dp"
+		            android:textStyle="bold"
+		            android:text="Bigture"
+		             />
+                
+		        <ImageView 
+		            android:id="@+id/countryIcon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/nameLabel"
+		            android:layout_marginLeft="5dp"
+		            android:layout_toRightOf="@+id/nameLabel"
+		            android:src="@drawable/mybigture_infoarea_country_icon"
+		            />
+		        
+		        <TextView
+		            android:id="@+id/countryLabel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/nameLabel"
+		    
+		            android:layout_toRightOf="@+id/countryIcon"
+		            android:text="USA"
+		            android:textSize="16dp" />
+                
+		         <TextView
+		            android:id="@+id/descLabel"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignLeft="@+id/nameLabel"
+		            android:layout_below="@+id/nameLabel"
+		            android:layout_marginTop="7dp"
+		            android:text="Taadsfsd"
+		            android:maxLines="1"
+		            android:textSize="16dp" />
+		         
+            </RelativeLayout>
+            <LinearLayout 
+                android:layout_width="76dp"
+	            android:layout_height="76dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/artworkspage_image_profile_bg"
+                >
+                <ImageView
+		            android:id="@+id/imageProfile"
+		            android:layout_width="58dp"
+		            android:layout_height="58dp"
+		            android:scaleType="centerCrop"
+		            android:layout_marginTop="5dp"
+		           	android:layout_marginLeft="9dp"
+		            android:background="@drawable/artworkspage_image_profile_photoarea"
+		            />
+                
+            </LinearLayout>
+            
+             
+        </RelativeLayout> 
+      	
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageContainer"
+            android:layout_alignRight="@+id/imageContainer"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="18dp"
+            >
+            <TextView 
+                android:id="@+id/referenceText"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/reference_text_bg"
+                android:text="From Contest"
+                android:visibility="gone"
+                /> 
+            
+            
+             <ImageView
+	            android:id="@+id/imageMore"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	          	android:layout_alignParentTop="true"
+	            android:src="@drawable/selector_icon_more" />
+            
+             <ImageView
+	            android:id="@+id/imageReplyMap"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignTop="@+id/imageMore"
+	            android:layout_marginRight="20dp"
+	            android:layout_toLeftOf="@+id/imageMore"
+	            android:visibility="visible"
+	            android:src="@drawable/selector_icon_reply_map" />
+	
+	        <ImageView
+	            android:id="@+id/imageContestIcon"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignTop="@+id/imageReplyMap"
+	            android:layout_marginRight="20dp"
+	            android:layout_toLeftOf="@+id/imageReplyMap"
+	            android:visibility="visible"
+	            android:src="@drawable/selector_icon_artwork_contest" />
+	
+	        <ImageView
+	            android:id="@+id/imageCollect"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignTop="@+id/imageContestIcon"
+	            android:layout_marginRight="20dp"
+	            android:layout_toLeftOf="@+id/imageContestIcon"
+	            android:src="@drawable/selector_icon_artwork_collect" />
+	            
+            
+            
+        </RelativeLayout>
+        
+        
+      
+    </RelativeLayout>
+
+</com.clockworks.android.tablet.bigture.views.artwork.ArtworkDetailCell>

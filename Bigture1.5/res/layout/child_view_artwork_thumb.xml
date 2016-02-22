@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="291dp"
+        android:layout_height="253dp"
+        android:background="#ffffff" >
+
+        <com.clockworks.android.tablet.bigture.views.common.TouchableImageView
+            android:id="@+id/imageArtwork"
+            android:layout_width="291dp"
+            android:layout_height="197dp"
+            android:layout_alignParentTop="true"
+           
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageArtwork"
+            android:layout_below="@+id/imageArtwork"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:text="TextViewasdfasdfsadfasdfadsfasd"
+            android:textStyle="bold"
+            android:ellipsize="end"
+	        android:singleLine="true"
+	        
+            android:textColor="@color/list_friend_name"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/titleLabel"
+            android:layout_below="@+id/titleLabel"
+            android:text="TextViewasdfasdfsadfsdasdafasdfsadfsdaf"
+            android:textStyle="bold"
+             android:ellipsize="end"
+	        android:singleLine="true"
+            android:textColor="@color/tab_text_p"
+            android:textSize="12dp" />
+
+        <ImageButton
+            android:id="@+id/imageCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:src="@drawable/selector_collection"
+            android:visibility="gone" />
+
+         <ImageButton
+            android:id="@+id/imageOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:src="@drawable/selector_open" />
+        
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageArtwork"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="66dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/winnerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_contest_winner_badge_list"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="55dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="3dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="740dp"
+    android:layout_height="643dp"
+    android:gravity="center"
+    android:orientation="vertical" 
+    android:padding="0dp"
+    android:background="@drawable/common_designpopup_contents_bg">
+ 
+      <RelativeLayout
+        android:layout_width="740dp"
+        android:layout_height="44dp"
+        android:padding="0dp"
+        android:background="@drawable/common_designpopup_navigationbar_bg" >
+        
+           <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/menu_settings"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+           
+           <Button
+               android:id="@+id/btnClose"
+               android:layout_width="53dp"
+               android:layout_height="44dp"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:background="@drawable/selector_btn_popup_close"/>
+      </RelativeLayout>
+      <RelativeLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:padding="0dp"
+          >
+           
+          <RelativeLayout 
+              android:layout_width="219dp"
+              android:layout_height="fill_parent"
+              android:background="@drawable/common_bg_texture_pattern"
+              >
+              <LinearLayout 
+                  android:id="@+id/topDivider"
+                  android:layout_width="fill_parent"
+                  android:layout_height="1dp"
+                  android:background="#f4f0e9"
+                  android:orientation="vertical"
+                  android:layout_alignParentTop="true"
+                  android:layout_marginTop="30dp"
+                  ></LinearLayout>
+              <TextView 
+                  android:id="@+id/btnMyProfile"
+                  android:layout_width="fill_parent"
+                  android:layout_height="72dp"
+                  android:text="@string/label_profile"
+                  android:textSize="16dp"
+                  android:textStyle="bold"
+                  android:textColor="#aba8a3"
+                  android:layout_below="@+id/topDivider"
+                  android:gravity="left|center_vertical"
+                  android:layout_marginLeft="30dp"
+                  />
+               <LinearLayout 
+                  android:id="@+id/middleDivider"
+                  android:layout_width="fill_parent"
+                  android:layout_height="1dp"
+                  android:background="#f4f0e9"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/btnMyProfile"
+                  ></LinearLayout>
+              <TextView 
+                  android:id="@+id/btnNotification"
+                  android:layout_width="fill_parent"
+                  android:layout_height="72dp"
+                  android:text="@string/setting_menu_notification"
+                  android:textSize="16dp"
+                  android:textStyle="bold"
+                  android:textColor="#aba8a3"
+                  android:layout_below="@+id/middleDivider"
+                  android:gravity="left|center_vertical"
+                  android:layout_marginLeft="30dp"
+                  />
+               <LinearLayout 
+                  android:id="@+id/bottmDivider"
+                  android:layout_width="fill_parent"
+                  android:layout_height="1dp"
+                  android:background="#f4f0e9"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/btnNotification"
+                  ></LinearLayout>
+               <Button
+                   android:id="@+id/btnLogout"
+                   android:layout_width="161dp"
+                   android:layout_height="46dp"
+                   android:layout_centerHorizontal="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginBottom="28dp"
+                   android:text="@string/setting_btn_logout"
+                   android:textSize="16dp"
+                   android:textColor="#555555"
+                   android:background="@drawable/selector_setting_logout"/>
+               
+          </RelativeLayout>
+          <ImageView 
+              android:id="@+id/tabArrow1"
+              android:layout_width="10dp"
+              android:layout_height="72dp"
+              android:src="@drawable/infocenter_tab_select"
+              android:layout_marginLeft="215dp"
+              android:layout_marginTop="30dp"
+              />
+           <ImageView 
+              android:id="@+id/tabArrow2"
+              android:layout_width="10dp"
+              android:layout_height="72dp"
+              android:src="@drawable/infocenter_tab_select"
+              android:layout_marginLeft="215dp"
+              android:layout_marginTop="103dp"
+              android:visibility="gone"
+              />
+          <fragment android:name="com.clockworks.android.tablet.bigture.fragment.MyProfileFragment"
+              android:id="@+id/myProfileFragment"
+              android:layout_width="456dp"
+              android:layout_height="597dp"
+               android:layout_alignParentRight="true"
+              android:layout_marginRight="32dp"
+              />
+          <fragment android:name="com.clockworks.android.tablet.bigture.fragment.NotificationFragment"
+              android:id="@+id/notificationFragment"
+              android:layout_width="456dp"
+              android:layout_height="597dp"
+               android:layout_alignParentRight="true"
+              android:layout_marginRight="32dp"
+              />
+          
+      </RelativeLayout>
+      
+      
+</LinearLayout>

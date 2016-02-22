@@ -1,0 +1,53 @@
+<com.clockworks.android.tablet.bigture.views.NotificationItemCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="12dp">
+
+    <ImageView 
+        android:id="@+id/notiImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/notiImage"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:id="@+id/notiTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Title"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:id="@+id/notiMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+        	android:text="msg"
+        	android:textSize="16dp"
+        	android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hours ago"
+            android:textSize="12dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#888888"/>
+        
+    </LinearLayout>
+    
+</com.clockworks.android.tablet.bigture.views.NotificationItemCell>

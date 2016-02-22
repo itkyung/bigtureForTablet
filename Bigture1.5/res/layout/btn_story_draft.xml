@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="364dp"
+    android:layout_height="63dp"
+    android:background="@drawable/selector_story_draft_bg" >
+	
+    <ImageView 
+        android:id="@+id/draftIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bigturestorypage_book_add_savedraft_icon_n"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        />
+    
+    <TextView 
+        android:id="@+id/draftTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save as draft story"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/draft_text"
+        android:layout_toRightOf="@+id/draftIcon"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        />
+    
+ 
+    
+     <ImageView 
+         android:id="@+id/draftArrow"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/common_left_arrow"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="23dp"
+         android:layout_marginRight="15dp"
+         />
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.account.AccountLoginView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="622dp"
+    android:padding="30dp" >
+
+    <TextView
+        android:id="@+id/labelIntroMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/label_enter_email_pwd"
+        android:textColor="@color/account_popup_text_color"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_below="@+id/labelIntroMsg"
+        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/common_inputbox_2_bg"
+        android:padding="0dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="0dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="sample@sample.com"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="13dp"
+            android:textColorHint="@color/text_color_hint" >
+			
+           
+        </EditText>
+
+        <EditText
+            android:id="@+id/editPasswd"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="1dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/account_ph_login_pwd"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="13dp"
+            android:textColorHint="@color/text_color_hint" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnKeepLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="28dp"
+        android:background="@null"
+        android:src="@drawable/selector_check_button" />
+
+    <TextView
+        android:id="@+id/keepLoginLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/btnKeepLogin"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/btnKeepLogin"
+        android:text="@string/label_keep_me_logged_in"
+        android:textColor="@color/account_popup_text_color"
+        android:textSize="16dp" />
+	
+      <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/forgotPassword"
+        android:layout_alignTop="@+id/forgotPassword"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/account_forgot_icon" />
+    
+      <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignBottom="@+id/btnKeepLogin"
+        android:gravity="center_vertical"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:text="@string/label_forgot_password"
+        android:textColor="@color/account_popup_text_color"
+        android:textSize="16dp" />
+      
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnKeepLogin"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/selector_contents_button_red"
+        android:text="@string/account_btn_login"
+        android:textColor="#ffffffff"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+	
+    <Button
+        android:id="@+id/createAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnLogin"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/selector_popup_button"
+        android:text="@string/account_menu_create"
+        android:textColor="#ffffffff"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/createAccount"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/createAccount" >
+		
+        
+        
+         <Button
+	        android:id="@+id/loginWithFacebook"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/label_login_with_facebook"
+	        android:background="@drawable/selector_btn_sns_left"
+	        android:textSize="16dp" />
+        
+         <Button
+	        android:id="@+id/loginWithTwitter"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/selector_btn_sns_right"
+	        
+	        android:text="@string/label_login_with_twitter"
+	        android:textSize="16dp" />
+        
+    </LinearLayout>
+
+  
+    
+</com.clockworks.android.tablet.bigture.views.account.AccountLoginView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.contest.ContestSmallCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="78dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="1dp">
+
+ 
+        <ImageView
+            android:id="@+id/imageContest"
+            android:layout_width="102dp"
+            android:layout_height="76dp"
+            android:scaleType="centerCrop"
+            />
+       
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+           
+            >
+            
+            <TextView
+		        android:id="@+id/titleLabel"
+		        android:layout_width="250dp"
+		        android:layout_height="wrap_content"
+		        android:text="TextView"
+		        android:textSize="20dp"
+		        android:maxLines="1"
+		        android:textColor="@color/list_friend_name"
+		        android:textStyle="bold" />
+            
+             <TextView
+		        android:id="@+id/rangeLabel"
+		        android:layout_width="250dp"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:text="03.01.2013 to 05.31.2013"
+		        android:textSize="16dp"
+		        android:textColor="@color/list_friend_name"
+		        android:maxLines="1"
+		         />  
+            
+        </LinearLayout>
+   	
+</com.clockworks.android.tablet.bigture.views.contest.ContestSmallCell>

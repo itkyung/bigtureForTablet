@@ -1,0 +1,317 @@
+package com.clockworks.android.tablet.bigture.fragment.artclass;
+
+import java.util.ArrayList;
+
+import com.clockworks.android.tablet.bigture.R;
+import com.clockworks.android.tablet.bigture.adapter.my.ExpandableFriendGroupAdapter;
+import com.clockworks.android.tablet.bigture.adapter.my.FindFriendAdapter;
+import com.clockworks.android.tablet.bigture.adapter.my.SelectedMemberAdapter;
+import com.clockworks.android.tablet.bigture.adapter.my.SelectedMemberAdapter.GroupMemberListener;
+import com.clockworks.android.tablet.bigture.serverInterface.entities.FriendEntity;
+import com.clockworks.android.tablet.bigture.serverInterface.entities.FriendGroupEntity;
+import com.clockworks.android.tablet.bigture.serverInterface.handler.FriendHandler;
+
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ExpandableListView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class SelectMemberFragment extends Fragment implements ExpandableFriendGroupAdapter.GroupSelectListener, 
+FindFriendAdapter.FriendSelectListener, GroupMemberListener{
+
+	private ArrayList<FriendEntity> selectedFriends;
+	private ArrayList<FriendEntity> likeUList;
+	private ArrayList<FriendGroupEntity> groups;
+	private TextView leftTitleView;
+	private TextView rightTitleView;
+	
+	private ExpandableListView leftExpandableList;
+	private ListView leftList;
+	
+	private ListView rightList;
+	private BitmapFactory.Options options;
+	private Context context;
+	private int currentPage;
+	private EditText keywordEdit;
+	
+	private ExpandableFriendGroupAdapter expandableAdapter;
+	private FindFriendAdapter findFriendAdapter;
+	private SelectedMemberAdapter selectedFriendsAdapter;
+	private boolean canOnlyRemoveNewAdded;
+	
+	public static SelectMemberFragment newInstance(ArrayList<FriendEntity> selectedFriends,
+			ArrayList<FriendEntity> friends,ArrayList<FriendGroupEntity> gs, boolean canOnlyRemoveNewAdded){
+		SelectMemberFragment fragment = new SelectMemberFragment();
+		
+		Bundle args = new Bundle();
+		args.putParcelableArrayList("selectedFriends", selectedFriends);
+		args.putParcelableArrayList("likeUList", friends);
+		args.putParcelableArrayList("groups", gs);
+		args.putBoolean("canOnlyRemoveNewAdded", canOnlyRemoveNewAdded);
+		fragment.setArguments(args);
+		
+		return fragment;
+	}
+	
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		this.context = activity;
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		options = new BitmapFactory.Options();
+		options.inPreferredConfig = Bitmap.Config.RGB_565;
+		options.inSampleSize = 3;
+		
+		Bundle args = getArguments();
+		
+		this.canOnlyRemoveNewAdded = args.getBoolean("canOnlyRemoveNewAdded");
+		this.selectedFriends = new ArrayList<FriendEntity>();
+		ArrayList<FriendEntity> friends = args.getParcelableArrayList("selectedFriends");
+		this.selectedFriends.addAll(friends);
+				
+		this.likeUList = args.getParcelableArrayList("likeUList");
+		if(this.likeUList == null)
+			this.likeUList = new ArrayList<FriendEntity>();
+		
+		ArrayList<FriendGroupEntity> gs = args.getParcelableArrayList("groups");
+		
+		this.groups = new ArrayList<FriendGroupEntity>();
+		FriendGroupEntity dummy = new FriendGroupEntity();
+		dummy.index = "-1";
+		dummy.groupName = "All";
+		dummy.friendCount = likeUList.size();
+		dummy.members = this.likeUList;
+		this.groups.add(dummy);
+		if(gs != null){
+			this.groups.addAll(gs);
+		}
+		
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.fragment_edit_member, container,false);
+		
+		this.leftTitleView = (TextView)view.findViewById(R.id.leftTitle);
+		this.leftTitleView.setText("Like U list (" + this.likeUList.size() + ")");
+		this.rightTitleView = (TextView)view.findViewById(R.id.rightTitle);
+		this.rightTitleView.setText("Class member list (" + this.selectedFriends.size() + ")");
+	
+		
+		this.leftExpandableList = (ExpandableListView)view.findViewById(R.id.leftExpandableList);
+		this.expandableAdapter = new ExpandableFriendGroupAdapter(context, new ArrayList<FriendGroupEntity>(), this);
+		
+		this.leftExpandableList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+			
+			@Override
+			public boolean onGroupClick(ExpandableListView parent, View v,
+					int groupPosition, long id) {
+
+				return false;
+			}
+		});
+		
+	
+		this.leftList = (ListView)view.findViewById(R.id.leftList);
+		this.findFriendAdapter = new FindFriendAdapter(context,this);
+		this.leftList.setAdapter(findFriendAdapter);
+		
+		this.rightList = (ListView)view.findViewById(R.id.rightList);
+		this.selectedFriendsAdapter = new SelectedMemberAdapter(context,this.selectedFriends,this,canOnlyRemoveNewAdded);
+		this.rightList.setAdapter(selectedFriendsAdapter);
+		
+		this.keywordEdit = (EditText)view.findViewById(R.id.editKeyword);
+		keywordEdit.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void afterTextChanged(Editable s){
+				currentPage = 1;
+				if (s.toString().length() > 1){
+					leftList.setVisibility(View.VISIBLE);
+					leftExpandableList.setVisibility(View.GONE);
+					searchUser(s.toString());
+				}else{
+					leftList.setVisibility(View.GONE);
+					leftExpandableList.setVisibility(View.VISIBLE);
+					searchUser(null);
+					
+				}
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after)
+			{
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count)
+			{
+			}
+		});
+		
+		findGroupMember();
+		searchUser(null);
+		
+		
+		return view;
+	}
+	
+	public ArrayList<FriendEntity> getSelectedFriends(){
+		return selectedFriendsAdapter.getSelectedMembers();
+	}
+
+	public ArrayList<FriendEntity> getAddedMembers(){
+		return selectedFriendsAdapter.getAddedMembers();
+	}
+	
+	public ArrayList<FriendEntity> getRemovedMembers(){
+		return selectedFriendsAdapter.getRemovedMembers();
+	}
+	
+	@Override
+	public void onChangeGroupMember(int memberCount) {
+		this.rightTitleView.setText("Class member list (" + memberCount + ")");
+		
+	}
+
+	@Override
+	public void selectGroup(FriendGroupEntity group, boolean selected) {
+		if(selected){
+			boolean duplicated = selectedFriendsAdapter.addMembers(group.members);
+			if(duplicated == true){
+				AlertDialog.Builder builder = new AlertDialog.Builder(context);
+				builder.setTitle("Duplicated");
+				builder.setMessage("Friends in selected group are duplicated!");
+				builder.setPositiveButton("OK",null);
+				builder.show();
+			}
+		}else{
+			for(FriendEntity f : group.members){
+				selectedFriendsAdapter.removeMember(f, false);
+			}
+		}
+		
+		
+	}
+
+	@Override
+	public boolean selectFriend(FriendEntity friend, boolean selected) {
+		boolean duplicated = false;
+		ArrayList<FriendEntity> f = new ArrayList<FriendEntity>();
+		f.add(friend);
+		if(selected){
+			duplicated = selectedFriendsAdapter.addMembers(f);
+			if(duplicated == true){
+				
+				AlertDialog.Builder builder = new AlertDialog.Builder(context);
+				builder.setTitle("Duplicated");
+				builder.setMessage("Selected friend is duplicated!");
+				builder.setPositiveButton("OK",null);
+				builder.show();
+			}
+		}else{
+			selectedFriendsAdapter.removeMember(friend, false);
+		}
+		
+		return duplicated;
+	}
+
+	@Override
+	public void clickGroup(int groupPosition) {
+		if(this.leftExpandableList.isGroupExpanded(groupPosition)){
+			this.leftExpandableList.collapseGroup(groupPosition);
+		}else{
+			this.leftExpandableList.expandGroup(groupPosition);
+		}
+		
+	}
+	
+	public void findGroupMember(){
+		//서버에서 각 group별 member정보를 얻어온다.
+		GroupAndMemberTask task = new GroupAndMemberTask();
+		task.execute();
+	}
+	
+	public void searchUser(String keyword){
+		if(keyword == null){
+			//Group view를 보여준다.
+			this.expandableAdapter.notifyDataSetChanged();
+		}else{
+			//서버에서 keyword로 검색해서 결과를 가져온다.
+			FindFriendTask task = new FindFriendTask();
+			task.execute(keyword);
+		}
+		
+	}
+	
+	class FindFriendTask extends AsyncTask<String, Void, ArrayList<FriendEntity>>{
+
+		@Override
+		protected ArrayList<FriendEntity> doInBackground(String... params) {
+			return FriendHandler.findInFriends(params[0], 1);
+		}
+
+		@Override
+		protected void onPostExecute(ArrayList<FriendEntity> result) {
+			super.onPostExecute(result);
+			findFriendAdapter.setUsers(result);
+			findFriendAdapter.notifyDataSetChanged();
+		}
+		
+	}
+	
+	class GroupAndMemberTask extends AsyncTask<Void, Void, ArrayList<FriendGroupEntity>>{
+
+		@Override
+		protected ArrayList<FriendGroupEntity> doInBackground(Void... params) {
+			return FriendHandler.findGroupAndMembers();
+		}
+
+		@Override
+		protected void onPostExecute(ArrayList<FriendGroupEntity> result) {
+			super.onPostExecute(result);
+			
+			
+			FriendGroupEntity dummy = new FriendGroupEntity();
+			dummy.index = "-1";
+			dummy.groupName = "All";
+			dummy.friendCount = likeUList.size();
+			dummy.members = likeUList;
+			
+			ArrayList<FriendGroupEntity> entities = new ArrayList<FriendGroupEntity>();
+			entities.add(dummy);
+			entities.addAll(result);
+			
+			expandableAdapter.setGroups(entities);
+			leftExpandableList.setAdapter(expandableAdapter);
+			expandableAdapter.notifyDataSetChanged();
+			
+		}
+	}
+
+	
+	
+}

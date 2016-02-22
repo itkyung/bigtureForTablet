@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1016dp"
+    android:layout_height="wrap_content" >
+        
+    <LinearLayout 
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="674dp"
+        android:background="@drawable/common_popup_bg"
+        android:layout_marginTop="56dp"
+        android:padding="0dp"
+        android:orientation="vertical"
+        >
+        
+	</LinearLayout>
+	
+    
+
+    <RelativeLayout
+        android:layout_width="1016dp"
+        android:layout_height="56dp"
+        android:background="@drawable/common_popup_navigation_bg" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:text="Cancel"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit member"
+            android:textColor="@color/popup_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_btn_popup_red"
+            android:text="OK"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+                
+    </RelativeLayout>
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="56dp"
+	     android:background="@drawable/common_popup_navigation_shadow_pattern"/>
+</FrameLayout>

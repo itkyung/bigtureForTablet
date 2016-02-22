@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="406dp"
+    android:layout_height="wrap_content" >
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/common_popup_bg"
+        android:orientation="vertical"
+        android:padding="30dp"
+        >
+        	<LinearLayout
+	            android:id="@+id/linearLayout1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="93dp"
+	            android:background="@drawable/common_inputbox_2_bg"
+	            android:padding="0dp"
+	            android:orientation="vertical" >
+	
+	            <RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="45dp" >
+	
+	                <TextView
+	                    android:id="@+id/textView1"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginLeft="13dp"
+	                    android:text="Start"
+	                    android:textColor="@color/black"
+	                    android:textSize="16dp"
+	                    android:textStyle="bold" />
+	
+	                <TextView
+	                    android:id="@+id/startDateLabel"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:gravity="right"
+	                    android:layout_marginRight="13dp"
+	                    android:layout_centerVertical="true"
+	                    android:text="2013.02.12"
+	                    android:textColor="@color/popup_menu_text"
+	                    android:textSize="16dp" />
+	
+	              
+	            </RelativeLayout>
+	
+	            <RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="45dp"
+	                android:layout_marginTop="1dp" >
+	
+	                <TextView
+	                    android:id="@+id/textView2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginLeft="13dp"
+	                    android:text="End"
+	                    android:textColor="@color/black"
+	                    android:textSize="16dp"
+	                    android:textStyle="bold" />
+	
+	                <TextView
+	                    android:id="@+id/endDateLabel"
+	                    android:layout_width="200dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerVertical="true"
+						android:layout_marginRight="13dp"
+	                    android:layout_alignParentRight="true"
+	                    android:text="0000.0.0."
+	                    android:gravity="right"
+	                    android:textColor="@color/popup_menu_text"
+	                    android:textSize="16dp" />
+	
+	              
+	            </RelativeLayout>
+	        </LinearLayout>
+        
+        
+	      <LinearLayout
+	         android:layout_marginTop="10dp"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:background="@drawable/common_inputbox_1_bg"
+	         android:padding="10dp" >
+	
+	         <EditText
+	             android:id="@+id/editDesc"
+	             android:layout_marginLeft="13dp"
+	             android:layout_width="0dip"
+	             android:layout_height="222dp"
+	             android:layout_weight="1"
+	             android:background="@null"
+	             android:textSize="16dp" >            
+	         </EditText>
+	
+	     </LinearLayout>
+	     
+	      <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="346dp"
+            android:layout_height="40dp"
+             android:layout_marginTop="10dp"
+            android:background="@drawable/selector_btn_popup_red"
+            android:text="Delete this class"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+	</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="406dp"
+        android:layout_height="56dp"
+        android:background="@drawable/common_popup_navigation_bg" >
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/selector_btn_popup"
+            android:text="Close"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit my class"
+            android:textColor="@color/popup_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_btn_popup_red"
+            android:text="OK"
+            android:textSize="16dp"
+            android:textColor="#ffffffff" />
+                
+    </RelativeLayout>
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="56dp"
+	     android:background="@drawable/common_popup_navigation_shadow_pattern"/>
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="174dp"
+    android:layout_height="226dp"
+    android:background="@drawable/experts_profile_bg"
+    android:paddingTop="7dp"
+    android:paddingLeft="9dp"
+    
+     >
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="156dp"
+            android:layout_height="156dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/jobLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageProfile"
+            android:layout_below="@+id/imageProfile"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:text="Art marketer"
+            android:textSize="14dp"
+            android:textColor="@color/list_expert_job" />
+        
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/jobLabel"
+            android:layout_below="@+id/jobLabel"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:text="ABAB"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/list_friend_name" />        
+
+</RelativeLayout>

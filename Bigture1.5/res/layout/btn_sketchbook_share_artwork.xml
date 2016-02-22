@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="376dp"
+    android:layout_height="108dp"
+    android:paddingLeft="24dp"
+    android:paddingTop="24dp"
+    android:background="@drawable/selector_sketchbook_btn_color" >
+	
+    <ImageView 
+        android:id="@+id/bigtureIcon"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:src="@drawable/sketchbook_func_save_icon_share"
+        android:layout_alignParentLeft="true"
+
+        />
+    
+    <TextView 
+        android:id="@+id/shareTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sketchbook_lb_share_bigture"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/share_story_text"
+        android:layout_toRightOf="@+id/bigtureIcon"
+        android:layout_marginLeft="21dp"
+        />
+    
+     <TextView 
+        android:id="@+id/shareDesc"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sketchbook_lb_share_bigture_desc"
+        android:textSize="16dp"
+        android:textColor="@color/share_story_text2"
+        android:layout_below="@+id/shareTitle"
+        android:layout_alignLeft="@+id/shareTitle"
+        android:layout_marginTop="2dp"
+        />
+     
+     <ImageView 
+         android:id="@+id/arrow"
+         android:layout_width="9dp"
+         android:layout_height="14dp"
+         android:src="@drawable/sketchbook_popup_arrow"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:layout_marginRight="20dp"
+         />
+   
+</RelativeLayout>

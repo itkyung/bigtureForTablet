@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="291dp"
+    android:layout_height="247dp"
+    android:background="@drawable/sketchbook_popup_open_artwork_bg"
+    android:focusableInTouchMode="false" >
+
+  
+        <ImageView
+            android:id="@+id/imageArtwork"
+            android:layout_width="267dp"
+            android:layout_height="184dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#ffeeeeee"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/filenameLabel"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageArtwork"
+            android:layout_below="@+id/imageArtwork"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="8dp"
+            android:text="TextViewasdfsdafsdfdfdfafdaa"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textColor="#786e5a"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#888888"
+            android:textSize="12dp"
+            android:layout_alignLeft="@+id/filenameLabel"
+            android:layout_below="@+id/filenameLabel"
+            android:text="TextView" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/filenameLabel"
+            android:background="@null"
+            android:src="@drawable/sketchbook_popup_open_btn_delete_n" />
+
+</RelativeLayout>

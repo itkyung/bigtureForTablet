@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="680dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:background="#dad9d6" >
+
+        <ImageView
+            android:id="@+id/imageArr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/infocenter_notice_list_fold_n" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/imageArr"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="TextView"
+            android:textColor="#ff464646"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignLeft="@+id/titleLabel"
+            android:layout_below="@+id/titleLabel"
+            android:layout_marginTop="5dp"
+            android:text="2012.01.01"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/infocenter_notice_list_unfold_contents_bg"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contentLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                android:textColor="#ff464646"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clockworks.android.tablet.bigture"
+    android:versionCode="5"
+    android:versionName="1.5.5" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    
+    <uses-feature android:name="android.hardware.camera" />
+        
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/bigture_app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"  >
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <activity android:label="AccountActivity" android:name="com.facebook.LoginActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"></activity>
+           
+        <activity
+            android:name="com.clockworks.android.tablet.bigture.MainActivity"
+            android:label="@string/bigture_app_name" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.clockworks.android.tablet.bigture.AccountActivity"
+            android:label="Account"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+        
+         <activity
+            android:name="com.clockworks.android.tablet.bigture.MyBigtureActivity"
+            android:label="My Bigture"
+            android:screenOrientation="landscape" />
+        
+         <activity
+            android:name="com.clockworks.android.tablet.bigture.CareerEditActivity"
+            android:label="Career"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+         
+          <activity
+            android:name="com.clockworks.android.tablet.bigture.NewsEditActivity"
+            android:label="News"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+          
+          <activity
+             android:name="com.clockworks.android.tablet.bigture.CropActivity"
+             android:label="Experts Page"
+             android:screenOrientation="landscape" />
+          
+         <activity
+            android:name="com.clockworks.android.tablet.bigture.SketchbookActivity"
+            android:label="Sketchbook"
+            android:screenOrientation="landscape" />
+         
+          <activity
+            android:name="com.clockworks.android.tablet.bigture.NewsImageViewerActivity"
+            android:label="NewsImageViewer"
+            android:screenOrientation="landscape" />
+          
+          <activity
+            android:name="com.clockworks.android.tablet.bigture.FindUserPopupActivity"
+            android:label="Find User"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+        
+          <activity
+            android:name="com.clockworks.android.tablet.bigture.EditGroupPopupActivity"
+            android:label="Edit Group"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+            
+          <activity
+            android:name="com.clockworks.android.tablet.bigture.EditGroupMemberActivity"
+            android:label="Edit Group Member"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+          
+           <activity
+            android:name="com.clockworks.android.tablet.bigture.PopupArtworkListActivity"
+            android:label="Select from my artworks"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+          
+           <activity
+            android:name="com.clockworks.android.tablet.bigture.SendPostCardPopupActivity"
+            android:label="Send post card"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+           
+            <activity
+	            android:name="com.clockworks.android.tablet.bigture.SelectFriendPopupActivity"
+	            android:label="Send post card"
+	            android:windowSoftInputMode="adjustPan"
+	            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+            
+            <activity
+	            android:name="com.clockworks.android.tablet.bigture.ViewPostCardPopupActivity"
+	            android:label="View post card"
+	            android:windowSoftInputMode="adjustPan"
+	            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+            
+            <activity
+           		android:name="com.clockworks.android.tablet.bigture.ArtworkListActivity"
+           	 	android:label="Artwork List"
+           	 	android:screenOrientation="landscape" />
+            
+            <activity
+           		android:name="com.clockworks.android.tablet.bigture.ArtworkDetailActivity"
+           	 	android:label="Artwork"
+           	 	android:screenOrientation="landscape" />
+            
+             <activity
+	            android:name="com.clockworks.android.tablet.bigture.PopupContestListActivity"
+	            android:label="Contest List"
+	            android:windowSoftInputMode="adjustPan"
+	            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+  
+             <activity
+	            android:name="com.clockworks.android.tablet.bigture.PopupEditArtworkActivity"
+	            android:label="Edit Artworks"
+	            android:windowSoftInputMode="adjustPan"
+	            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+                          
+              <activity
+           		android:name="com.clockworks.android.tablet.bigture.ContestListActivity"
+           	 	android:label="Contest"
+           	 	android:screenOrientation="landscape" />
+              
+               <activity
+           		android:name="com.clockworks.android.tablet.bigture.ContestDetailActivity"
+           	 	android:label="Contest"
+           	 	android:screenOrientation="landscape" />
+               
+              <activity
+           		android:name="com.clockworks.android.tablet.bigture.ExpertListActivity"
+           	 	android:label="Expert"
+           	 	android:screenOrientation="landscape" />
+               
+              <activity
+	            android:name="com.clockworks.android.tablet.bigture.FindExpertsPopupActivity"
+	            android:label="Find Expert"
+	            android:windowSoftInputMode="adjustPan"
+	            android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+              
+               <activity
+           		android:name="com.clockworks.android.tablet.bigture.ArtClassListActivity"
+           	 	android:label="Art class"
+           	 	android:screenOrientation="landscape" />
+               
+               <activity
+           			android:name="com.clockworks.android.tablet.bigture.PopupCreateClassActivity"
+           	 		android:label="Create Art class"
+           	 		 android:windowSoftInputMode="adjustPan"
+           	 		android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+  
+               <activity
+           			android:name="com.clockworks.android.tablet.bigture.ArtClassDetailActivity"
+           	 		android:label="Art class"
+           	 		android:screenOrientation="landscape" />
+               
+               <activity
+           			android:name="com.clockworks.android.tablet.bigture.PopupEditArtClassActivity"
+           	 		android:label="Edit Art class"
+           	 		 android:windowSoftInputMode="adjustPan"
+           	 		android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+               
+               <activity
+           			android:name="com.clockworks.android.tablet.bigture.PopupSelectMemberActivity"
+           	 		android:label="Add class member"
+           	 		 android:windowSoftInputMode="adjustPan"
+           	 		android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>               
+
+                <activity
+           			android:name="com.clockworks.android.tablet.bigture.StoryListActivity"
+           	 		android:label="Story"
+           	 		android:screenOrientation="landscape" />
+               
+                <activity
+           			android:name="com.clockworks.android.tablet.bigture.StoryBookEditActivity"
+           	 		android:label="Story Edit"
+           	 		android:screenOrientation="landscape" />               
+  
+                 <activity
+           			android:name="com.clockworks.android.tablet.bigture.StoryBookViewActivity"
+           	 		android:label="Story View"
+           	 		android:screenOrientation="landscape" /> 
+                
+                  <activity
+           			android:name="com.clockworks.android.tablet.bigture.views.ErrorView"
+           	 		android:label="Error View"
+           	 		android:screenOrientation="landscape" />  
+                
+                   <activity
+           			android:name="com.clockworks.android.tablet.bigture.SettingPopupActivity"
+           	 		android:label="Settings"
+           	 		android:windowSoftInputMode="adjustPan"
+           	 		android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>   
+              		
+                   <activity
+           			android:name="com.clockworks.android.tablet.bigture.InfoCenterPopupActivity"
+           	 		android:label="Info"
+           	 		android:windowSoftInputMode="adjustPan"
+           	 		android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>   
+                   
+                   <activity
+		            android:name="com.clockworks.android.tablet.bigture.LookActivity"
+		            android:label="Look"
+		            android:windowSoftInputMode="adjustPan"
+		            android:screenOrientation="landscape"/>  
+                   
+       <receiver 
+            android:name="com.clockworks.android.tablet.bigture.GCMReceiver"
+            android:exported="true">
+            <intent-filter android:priority="100">
+            	<action android:name="net.ion.android.Bigture.GCM_RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <!--
+          BroadcastReceiver that will receive intents from GCM
+          services and handle them to the custom IntentService.
+
+          The com.google.android.c2dm.permission.SEND permission is necessary
+          so only GCM services can send data messages for the app.
+        -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.clockworks.android.bigture" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+          Application-specific subclass of GCMBaseIntentService that will
+          handle received messages.
+
+          By default, it must be named .GCMIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <service android:name="com.clockworks.android.tablet.bigture.GCMIntentService" />
+        
+    </application>
+
+</manifest>

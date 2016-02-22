@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="364dp"
+    android:layout_height="137dp"
+    android:background="@drawable/selector_story_share_bg" >
+	
+    <ImageView 
+        android:id="@+id/bigtureIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bigturestorypage_book_add_share_icon_n"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        />
+    
+    <TextView 
+        android:id="@+id/shareTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/story_lb_share_title"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/share_story_text"
+        android:layout_toRightOf="@+id/bigtureIcon"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        />
+    
+     <TextView 
+        android:id="@+id/shareDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/story_lb_share_description"
+        android:textSize="16dp"
+        android:textColor="@color/share_story_text2"
+        android:layout_below="@+id/shareTitle"
+        android:layout_alignLeft="@+id/shareTitle"
+        android:layout_marginTop="10dp"
+        />
+    
+     <ImageView 
+         android:id="@+id/shareArrow"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/common_left_arrow"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="62dp"
+         android:layout_marginRight="15dp"
+         />
+</RelativeLayout>

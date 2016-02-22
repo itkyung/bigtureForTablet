@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="688dp"
+    android:layout_height="wrap_content"
+    android:paddingTop="30dp"
+	 >
+
+    <TextView
+        android:id="@+id/textPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="1 Page"
+        android:textSize="16dp"
+        android:textColor="#786e5a" />
+
+     <ImageView
+         android:id="@+id/imageArtwork1"
+         android:layout_toRightOf="@+id/textPage"
+         android:layout_marginLeft="198dp"
+         android:layout_width="438dp"
+         android:layout_height="302dp"
+         android:scaleType="centerCrop" />
+    
+
+    <LinearLayout
+        android:id="@+id/imageDivider"
+        android:layout_width="688dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageArtwork1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+      
+        android:padding="0dp"
+        android:background="@drawable/bigturestorypage_book_divider_dot_pattern" >
+        
+     </LinearLayout>
+
+</RelativeLayout>

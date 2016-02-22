@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.story.listcell.NormalCell xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false" >
+
+    <LinearLayout
+        android:id="@+id/bookContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="29dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="33dp"
+        android:paddingRight="33dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.story.listcell.BookThumbnail
+                android:id="@+id/book1"
+                android:layout_width="272dp"
+                android:layout_height="294dp"
+                android:layout_gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/vwAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bigturestory_add"
+                android:clickable="true"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="108dp"
+                    android:src="@drawable/bigturestory_add_icon_new" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="65dp"
+                    android:text="Add my Story"
+                    android:textColor="#ffcc0000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.story.listcell.BookThumbnail
+                android:id="@+id/book2"
+                android:layout_width="272dp"
+                android:layout_height="294dp" 
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.story.listcell.BookThumbnail
+                android:id="@+id/book3"
+                android:layout_width="272dp"
+                android:layout_height="294dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.clockworks.android.tablet.bigture.views.story.listcell.BookThumbnail
+                android:id="@+id/book4"
+                android:layout_width="272dp"
+                android:layout_height="294dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/bookContainer"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:background="@drawable/bigturestory_list_book_stand_pattern" />
+
+</com.clockworks.android.tablet.bigture.views.story.listcell.NormalCell>

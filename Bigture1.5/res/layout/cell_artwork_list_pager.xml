@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:paddingLeft="34dp"
+    android:paddingRight="34dp"
+    android:layout_marginTop="26dp"
+    android:paddingBottom="30dp"
+    >
+
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="140dp"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/selector_btn_artwork_list_pager"
+
+        android:text="&lt;  Previous Page" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="140dp"
+        android:layout_height="37dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_btn_artwork_list_pager"
+        android:text="Next Page  >" />
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="291dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/artworkspage_menu_context_bg"
+    android:paddingTop="13dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="vertical" >
+
+    <Button 
+        android:id="@+id/context_menu_save_image"
+        android:layout_width="261dp"
+        android:layout_height="46dp"
+        android:orientation="vertical"
+        android:background="@drawable/selector_btn_artworks_1"
+        android:text="@string/artworks_po_save_image"
+        android:textSize="16dp"
+        android:textColor="@color/context_menu_color"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="58dp"    
+        >  
+    </Button>
+    <Button 
+        android:id="@+id/context_menu_share_other"
+        android:layout_width="261dp"
+        android:layout_height="46dp"
+        android:orientation="vertical"
+        android:background="@drawable/selector_btn_artworks_2"
+        android:textSize="16dp"
+        android:textColor="@color/context_menu_color"
+        android:text="@string/artworks_po_share_others"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="58dp"   
+        >
+         
+    </Button>
+  	<Button 
+        android:id="@+id/context_menu_send_card"
+        android:layout_width="261dp"
+        android:layout_height="46dp"
+        android:orientation="vertical"
+        android:background="@drawable/selector_btn_artworks_3"
+        android:textSize="16dp"
+        android:textColor="@color/context_menu_color"
+        android:text="@string/artworks_po_send_postcard"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="58dp"       
+        android:visibility="gone"
+        >
+       
+    </Button>
+    <Button 
+        android:id="@+id/context_menu_edit_artworks"
+        android:layout_width="261dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/selector_btn_artworks_4"
+		android:textSize="16dp"
+        android:textColor="@color/context_menu_color"
+        android:text="@string/artworks_po_edit_artwork"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="58dp"    
+        >
+       
+    </Button>
+	<Button 
+        android:id="@+id/context_menu_delete"
+        android:layout_width="261dp"
+        android:layout_height="46dp"
+        android:orientation="vertical"
+        android:background="@drawable/selector_btn_artworks_5"
+        android:textSize="16dp"
+        android:textColor="@color/context_menu_color"
+        android:text="@string/artworks_po_delete"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="58dp"    
+        >
+       </Button>
+</LinearLayout>

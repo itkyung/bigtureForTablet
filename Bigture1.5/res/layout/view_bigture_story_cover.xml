@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.story.page.ViewCoverPage xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="901dp"
+    android:layout_height="633dp" >
+
+    <RelativeLayout
+        android:layout_width="901dp"
+        android:layout_height="633dp"
+        android:background="@drawable/bigturestorypage_book_paper_bg"
+        android:layout_alignParentTop="true"
+        >
+      
+        
+        <Button
+            android:id="@+id/collectBtn"
+            android:layout_width="43dp" 
+			android:layout_height="42dp"
+			android:background="@drawable/selector_btn_story_collect"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="19dp"
+			android:layout_marginRight="21dp"/>
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:textSize="48dp"
+            android:textStyle="bold" />
+		<LinearLayout 
+		    android:id="@+id/titleDivider"
+		    android:layout_width="600dp"
+		    android:layout_height="2dp"
+		     android:layout_centerHorizontal="true"
+		    android:layout_below="@+id/titleLabel"
+		    android:background="@color/story_cover_divider"
+		    android:orientation="vertical"
+		    ></LinearLayout>
+        
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/titleDivider"
+            android:lines="1"
+            android:text="Linda Loaning"
+            android:textSize="20dp" />
+        
+        
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="600dp"
+            android:layout_height="360dp"
+            android:layout_below="@+id/nameLabel"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="52dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bigturestorypage_book_cover_image_blank" />
+        
+        
+        <ImageView 
+            android:id="@+id/shadowImg"
+            android:layout_width="19dp"
+            android:layout_height="631dp"
+            android:src="@drawable/bigturestorypage_book_cover_shadow"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="23dp"
+            />
+        
+    </RelativeLayout>
+
+</com.clockworks.android.tablet.bigture.views.story.page.ViewCoverPage>

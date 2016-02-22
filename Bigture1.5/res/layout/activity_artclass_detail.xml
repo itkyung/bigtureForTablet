@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_bg_check_pattern_x" >
+    
+ 	
+     <fragment android:name="com.clockworks.android.tablet.bigture.fragment.common.TitleBar"
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_marginTop="56dp"
+	    android:orientation="horizontal"
+	    android:padding="0dp"
+	    >
+	    <RelativeLayout 
+	        android:layout_width="342dp"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/common_info_bg_pattern"
+	        >
+	        <Button 
+	            android:id="@+id/collectBtn"
+	            android:layout_width="70dp"
+	            android:layout_height="68dp"
+	            android:background="@drawable/selector_btn_artclass_collect"
+	            android:layout_alignParentLeft="true"
+	            />
+	        <Button 
+	            android:id="@+id/joinedBtn"
+	            android:layout_width="270dp"
+	            android:layout_height="68dp"
+	            android:layout_toRightOf="@+id/collectBtn"
+	            android:background="@drawable/selector_btn_artclass_joined"
+	            android:text="Joined artists"
+	            android:textSize="18dp"
+	            android:textColor="@color/popup_menu_text"
+	            android:gravity="left|center_vertical"
+	            android:paddingLeft="54dp"
+	            />
+	        <ImageView 
+	            android:id="@+id/coverImg"
+	            android:layout_width="340dp"
+	            android:layout_height="234dp"
+	            android:src="@drawable/artclasspage_infoarea_coverimage_blank"
+	            android:scaleType="centerCrop"
+	            android:layout_below="@+id/collectBtn"
+	            />
+	        <RelativeLayout 
+	            android:id="@+id/ownerFrame"
+			    android:layout_width="fill_parent"
+			    android:layout_height="88dp"
+			    android:orientation="horizontal"
+			    android:layout_below="@+id/coverImg"
+			    android:paddingTop="20dp"
+			    android:paddingLeft="20dp"
+			    android:paddingBottom="20dp"
+			    android:paddingRight="18dp" >
+			
+			    <ImageView
+			        android:id="@+id/imageProfile"
+			        android:layout_width="48dp"
+			        android:layout_height="48dp"
+			        android:layout_centerVertical="true"
+			        android:layout_gravity="center_vertical"
+			        android:src="@drawable/common_pofile_48x48" />
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignTop="@+id/imageProfile"
+			        android:layout_marginLeft="10dp"
+			        android:layout_toRightOf="@+id/imageProfile"
+			        android:layout_weight="1"
+			        android:orientation="vertical" >
+					<TextView
+					    android:id="@+id/jobLabel"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_marginBottom="1dp"
+					    android:text="job"
+					    android:textSize="14dp"
+					    android:textColor="@color/list_expert_job"
+					    />
+					<LinearLayout 
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal"
+					    >
+					    <TextView
+				            android:id="@+id/nameLabel"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:text="TextView"
+				            android:textColor="@color/list_friend_name"
+				            android:textSize="18dp"
+				            android:textStyle="bold" />
+				
+				        <TextView
+				            android:id="@+id/countryLabel"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_marginLeft="5dp"
+				             android:textColor="@color/list_friend_name"
+				            android:text="TextView"
+				            android:textSize="14dp" />
+					    
+					</LinearLayout>
+			    </LinearLayout>    
+			</RelativeLayout>
+	        <LinearLayout 
+	             android:id="@+id/divider"
+	             android:layout_below="@+id/ownerFrame"
+		         android:layout_width="fill_parent"
+		         android:layout_height="1dp"
+		         android:layout_marginLeft="20dp"
+		         android:layout_marginRight="18dp"
+		         android:orientation="vertical"
+		         android:background="@color/edit_popup_divider"
+		         ></LinearLayout> 
+	        <RelativeLayout 
+	            android:id="@+id/rangeDate"
+	            android:layout_width="fill_parent"
+	            android:layout_height="54dp"
+	            android:paddingLeft="20dp"
+	            android:paddingRight="18dp"
+	            android:layout_below="@+id/divider"
+	            android:gravity="center_vertical"
+	            >
+	            <TextView 
+	                android:id="@+id/startDate"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="2013.02.01"
+	                android:layout_alignParentLeft="true"
+	                android:textSize="16dp"
+	                android:textStyle="bold"
+	                android:textColor="@color/popup_menu_text"
+	                />
+	            <TextView 
+	                android:id="@+id/dash"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="-"
+	                android:layout_toRightOf="@+id/startDate"
+	                android:layout_marginLeft="5dp"
+	                />
+	             <TextView 
+	                android:id="@+id/endDate"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="2013.02.01"
+	                android:layout_toRightOf="@+id/dash"
+	                android:layout_marginLeft="5dp"
+	                android:textSize="16dp"
+	                android:textStyle="bold"
+	                android:textColor="@color/popup_menu_text"
+	                />
+	            <Button 
+	                android:id="@+id/btnEdit"
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:background="@drawable/selector_btn_artclass_edit"
+	                android:layout_alignParentRight="true"
+	                />
+	        </RelativeLayout>
+	        <TextView 
+	            android:id="@+id/txtDesc"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="18dp"
+	            android:layout_below="@+id/rangeDate"
+	            android:text="AAA"
+	            android:textSize="16dp"
+	            android:textColor="@color/popup_menu_text"
+	            
+	            />
+	        
+	        
+	    </RelativeLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/listContainer"
+	        android:layout_width="938dp"
+	        android:layout_height="match_parent"
+	        android:padding="0dp"
+	        android:orientation="vertical"
+	         >
+	      
+	    </LinearLayout>
+	</LinearLayout>     
+     
+    
+
+    
+    
+</FrameLayout>

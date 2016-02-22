@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.account.CreateAccountStep1 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="622dp"
+    android:padding="30dp" >
+
+    <Button
+        android:id="@+id/btnKor"
+        android:visibility="gone"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnEng"
+        android:layout_toLeftOf="@+id/btnEng"
+        android:background="@drawable/selector_btn_account_tab_left"
+        android:text="Korean"
+        android:textStyle="bold"
+        android:textColor="@color/account_popup_text_color"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btnEng"
+        android:layout_width="82dp"
+         android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_btn_account_tab_right"
+        android:text="English"
+        android:textStyle="bold"
+        android:textColor="@color/account_popup_text_color"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/userAgreementTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/btnEng"
+        android:text="@string/account_lb_create_terms"
+        android:textSize="16dp"
+        android:textColor="@color/account_popup_text_color"
+        android:textStyle="bold" />
+
+      <WebView
+          android:id="@+id/viewLicense"
+          android:layout_width="match_parent"
+          android:layout_height="188dp"
+          android:layout_alignLeft="@+id/userAgreementTitle"
+          android:layout_alignRight="@+id/btnEng"
+          android:layout_below="@+id/userAgreementTitle"
+          android:layout_marginTop="10dp"
+          />
+
+      <ImageButton
+        android:id="@+id/btnAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewLicense"
+        android:layout_below="@+id/viewLicense"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:src="@drawable/selector_check_button" />
+       
+    <TextView
+        android:id="@+id/btnAgreeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/btnAgree"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/btnAgree"
+        android:text="@string/account_lb_create_agree"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/account_popup_text_color" />
+	
+    <TextView
+        android:id="@+id/userPrivacyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnAgree"
+        android:layout_marginTop="15dp"
+        android:text="@string/account_lb_create_privacy_policy"
+        android:textSize="16dp"
+        android:textColor="@color/account_popup_text_color"
+        android:textStyle="bold" />
+
+      <WebView
+          android:id="@+id/viewPrivacy"
+          android:layout_width="match_parent"
+          android:layout_height="178dp"
+          android:layout_alignLeft="@+id/userPrivacyTitle"
+          android:layout_alignRight="@+id/btnEng"
+          android:layout_below="@+id/userPrivacyTitle"
+          android:layout_marginTop="10dp"
+          />
+
+      <ImageButton
+        android:id="@+id/btnPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewPrivacy"
+        android:layout_below="@+id/viewPrivacy"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:src="@drawable/selector_check_button" />
+       
+    <TextView
+        android:id="@+id/btnPrivacyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/btnPrivacy"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/btnPrivacy"
+        android:text="@string/account_lb_create_agree"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/account_popup_text_color" />
+   <Button
+       android:id="@+id/btnNext1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentLeft="true"
+       android:background="@drawable/selector_contents_button_red"
+       android:text="@string/common_btn_next"
+       android:textColor="#ffffffff"
+       android:textSize="16dp"
+       android:textStyle="bold" />
+
+</com.clockworks.android.tablet.bigture.views.account.CreateAccountStep1>

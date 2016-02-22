@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_popup_navigation_bg" >
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/btnOK"
+            android:background="@drawable/selector_contents_button_red"
+            android:text="Test"
+            android:textColor="#ffffffff"
+            android:visibility="gone" />
+        
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/btnCancel"
+            android:background="@drawable/selector_contents_button_red"
+            android:text="OK"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_popup_button"
+            android:text="Cancel"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Crop Image"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.clockworks.android.tablet.bigture.views.crop.CropView
+        android:id="@+id/cropView"
+        android:layout_width="1280dp"
+        android:layout_height="744dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/common_popup_bg" >
+
+    </com.clockworks.android.tablet.bigture.views.crop.CropView>
+
+</FrameLayout>

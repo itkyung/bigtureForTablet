@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="941dp"
+    android:layout_height="620dp"
+    android:background="@drawable/mybigture_popup_postcard_bg" >
+
+    <ImageView
+        android:id="@+id/artworkImg"
+        android:layout_width="450dp"
+        android:layout_height="310dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="183dp" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/mybigture_popup_postcard_close_icon" />
+
+    <TextView
+        android:id="@+id/artworkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/artworkImg"
+        android:layout_below="@+id/artworkImg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="Title"
+        android:textColor="@color/color_popup_menu_text"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/artworkOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/artworkTitle"
+        android:layout_alignBottom="@+id/artworkTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/artworkTitle"
+        android:text="Owner"
+        android:textColor="@color/color_popup_menu_text"
+        android:textSize="16dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/artworkDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/artworkOwner"
+        android:layout_alignBottom="@+id/artworkOwner"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/artworkOwner"
+        android:text="date"
+        android:textColor="@color/color_popup_menu_text"
+        android:textSize="16dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/artworkOrigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/artworkTitle"
+        android:layout_below="@+id/artworkTitle"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="@color/color_popup_menu_text"
+        android:textSize="14dp"
+        android:textStyle="italic" />
+
+    <FrameLayout 
+        android:id="@+id/targetContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/artworkImg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="42dp"
+        android:layout_toRightOf="@+id/artworkImg"
+        >
+        <RelativeLayout 
+	        android:id="@+id/singleTargetContainer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="27dp"
+	        android:visibility="visible"
+	        >
+	        <ImageView
+		        android:id="@+id/targetProfile"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/common_pofile_48x48" />
+	
+		    <LinearLayout
+		        android:id="@+id/linearLayout1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignTop="@+id/targetProfile"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toRightOf="@+id/targetProfile"
+		        android:orientation="vertical" >
+		
+		        <TextView
+		            android:id="@+id/targetJob"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="job"
+		            android:textColor="@color/list_expert_job"
+		            android:textSize="14dp" />
+		
+		        <RelativeLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" >
+		
+		            <TextView
+		                android:id="@+id/targetName"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="Name"
+		                android:textColor="@color/popup_menu_text"
+		                android:textSize="18dp"
+		                android:textStyle="bold" />
+		            
+		              <TextView
+				        android:id="@+id/targetCountry"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:layout_toRightOf="@+id/targetName"
+				        android:layout_alignBaseline="@+id/targetName"
+				        android:textSize="14dp"
+				        android:textColor="@color/popup_menu_text"
+				        android:text="country" />
+		        </RelativeLayout>
+		    </LinearLayout>
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:id="@+id/multiTargetContainer"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="24dp"
+	        android:visibility="gone"
+	        >
+        	 <ImageView
+		        android:id="@+id/imageView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/mybigture_popup_postcard_to_icon" />
+	        
+        	 <com.clockworks.android.tablet.bigture.views.common.ExpandableTextView 
+        	     android:id="@+id/multiTargetName"
+        	     android:layout_width="fill_parent"
+        	     android:layout_height="wrap_content"
+        	     android:layout_toRightOf="@+id/imageView1"
+        	     android:layout_marginLeft="20dp"
+        	     android:textSize="20dp"
+        	     android:textColor="@color/black"
+        	     
+        	     />
+	         
+	    </RelativeLayout>
+    </FrameLayout>
+    
+
+     <TextView
+        android:id="@+id/commentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/targetContainer"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/targetContainer"
+        
+        android:textSize="20dp"
+        android:textColor="@color/popup_menu_text"
+        android:maxLines="10"
+        android:text="Comment" />
+     
+      <TextView
+        android:id="@+id/sendDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/commentText"
+        android:layout_below="@+id/commentText"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
+        android:textColor="@color/my_country_color"
+        android:text="03.19.2013 16:45" />
+     
+    <Button
+        android:id="@+id/btnReply"
+        android:layout_width="84dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_contents_button_red"
+        android:text="Reply"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/sendDateText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selector_popup_postcard_btn_delete" />
+
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="116dp"
+        android:background="@drawable/selector_popup_postcard_btn_open" />
+
+</RelativeLayout>

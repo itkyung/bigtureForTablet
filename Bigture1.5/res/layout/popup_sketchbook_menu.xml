@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="376dp"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:orientation="vertical" >
+	
+    <LinearLayout 
+        android:id="@+id/saveMenu"
+        android:layout_width="376dp"
+   		android:layout_height="wrap_content"
+   		android:padding="0dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+        <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="44dp"
+	        android:padding="0dp"
+	        android:background="@drawable/common_designpopup_navigationbar_bg" >
+	
+	        <TextView
+	            android:id="@+id/titleLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:text="@string/Save"
+	            android:textSize="18dp"
+	            android:textColor="#ffffff"
+	            android:textStyle="bold" />
+	
+	    </RelativeLayout>
+		<com.clockworks.android.tablet.bigture.views.sketchbook.button.SaveTempButton
+	        android:id="@+id/btnSaveTemp"
+	        android:layout_width="376dp"
+	        android:layout_height="114dp"
+	        />
+		
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="#eeeeee"
+	        ></LinearLayout>
+	    
+	    <com.clockworks.android.tablet.bigture.views.sketchbook.button.SaveAlbumButton
+	        android:id="@+id/btnSaveAlbum"
+	        android:layout_width="376dp"
+	        android:layout_height="66dp"
+	        />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/shareMenu"
+        android:layout_width="376dp"
+   		android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+         android:visibility="gone"
+        >
+	     <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="44dp"
+	        android:padding="0dp"
+	        android:background="@drawable/common_designpopup_navigationbar_bg" >
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:text="@string/share"
+	            android:textSize="18dp"
+	            android:textColor="#ffffff"
+	            android:textStyle="bold" />
+	
+	    </RelativeLayout>
+		<com.clockworks.android.tablet.bigture.views.sketchbook.button.ShareArtworkButton
+	        android:id="@+id/btnShareArtwork"
+	        android:layout_width="376dp"
+	        android:layout_height="108dp"
+	        />
+		
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="#eeeeee"
+	        ></LinearLayout>
+	    
+	    <com.clockworks.android.tablet.bigture.views.sketchbook.button.SendPostCardButton
+	        android:id="@+id/btnSendCard"
+	        android:layout_width="376dp"
+	        android:layout_height="108dp"
+	        android:visibility="gone"
+	        />
+	     <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="#eeeeee"
+	        android:visibility="gone"
+	        ></LinearLayout>
+	    
+	    <com.clockworks.android.tablet.bigture.views.sketchbook.button.ShareOtherButton
+	        android:id="@+id/btnShareOther"
+	        android:layout_width="376dp"
+	        android:layout_height="64dp"
+	        />
+	     <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="#eeeeee"
+	        ></LinearLayout>
+	    
+	    <com.clockworks.android.tablet.bigture.views.sketchbook.button.PrintButton
+	        android:id="@+id/btnPrint"
+	        android:layout_width="376dp"
+	        android:layout_height="66dp"
+	        android:visibility="gone"
+	        />
+    </LinearLayout>
+    
+</LinearLayout>

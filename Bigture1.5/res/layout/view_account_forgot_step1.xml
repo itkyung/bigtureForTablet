@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clockworks.android.tablet.bigture.views.account.ForgotPasswordStep1 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="622dp"
+    android:padding="30dp"
+    android:orientation="vertical"
+     >
+	
+
+    <TextView
+        android:id="@+id/lableForgot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_forgot_pwd_1"
+        android:textColor="@color/account_popup_text_color"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/lableForgot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/label_forgot_pwd_2"
+        android:textColor="@color/account_popup_text_color"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+        
+    <EditText
+        android:id="@+id/editBigtureId"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/common_inputbox_1_bg"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/text_color_hint"
+        android:paddingLeft="13dp" >
+
+        <requestFocus />
+    </EditText>
+	
+     <Button
+      android:id="@+id/btnSend"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/selector_contents_button_red"
+      android:text="Send"
+      android:textColor="#ffffffff"
+      android:textSize="16dp"
+      android:textStyle="bold" />
+   
+
+</com.clockworks.android.tablet.bigture.views.account.ForgotPasswordStep1>

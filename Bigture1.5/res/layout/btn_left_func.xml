@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="71dp"
+    android:layout_height="52dp"
+    android:background="@drawable/selector_sketchbook_left_btn"
+    >
+    
+    <ImageView 
+        android:id="@+id/btnImg"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:src="@drawable/sketchbook_func_btn_icon_undo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+    
+    <TextView 
+    	android:id="@+id/btnTitle"
+    	android:layout_centerHorizontal="true"
+    	android:layout_below="@+id/btnImg"
+    	android:layout_marginTop="3dp"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="Title"
+    	android:textSize="11sp"
+    	android:textStyle="bold"
+    	android:textColor="#ffffff"
+    	/>
+    </RelativeLayout>
